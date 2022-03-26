@@ -1,0 +1,1 @@
+D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\Olympic-stats-xamarin.UWP.csproj;x64
