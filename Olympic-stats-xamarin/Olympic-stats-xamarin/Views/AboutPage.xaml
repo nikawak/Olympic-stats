@@ -3,7 +3,8 @@
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              x:Class="Olympic_stats_xamarin.Views.AboutPage"
              xmlns:vm="clr-namespace:Olympic_stats_xamarin.ViewModels"
-             Title="{Binding Title}">
+             Title="{Binding Title}"
+             BackgroundColor="{AppThemeBinding Dark=#0000ff, Light=#ffff00}">
     
     <ContentPage.BindingContext>
         <vm:AboutViewModel />
@@ -12,6 +13,9 @@
     <ContentPage.Resources>
         <ResourceDictionary>
             <Color x:Key="Accent">#96d1ff</Color>
+            <Color x:Key="black">#ffffff</Color>
+            <Color x:Key="white">#000000</Color>
+            
         </ResourceDictionary>
     </ContentPage.Resources>
 
@@ -20,7 +24,7 @@
             <RowDefinition Height="Auto" />
             <RowDefinition Height="*" />
         </Grid.RowDefinitions>
-        <StackLayout BackgroundColor="{StaticResource Accent}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
+        <StackLayout BackgroundColor="{AppThemeBinding Dark={StaticResource Accent},Light={StaticResource white}}" VerticalOptions="FillAndExpand" HorizontalOptions="Fill">
             <StackLayout Orientation="Horizontal" HorizontalOptions="Center" VerticalOptions="Center">
                 <ContentView Padding="0,40,0,40" VerticalOptions="FillAndExpand">
                     <Image Source="xamarin_logo.png" VerticalOptions="Center" HeightRequest="64" />
@@ -29,7 +33,7 @@
         </StackLayout>
         <ScrollView Grid.Row="1">
             <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
-                <Label Text="Start developing now" FontSize="Title"/>
+                <Label Text="{Binding str}" FontSize="Title"/>
                 <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="0,0,0,0"/>
                 <Label FontSize="16" Padding="0,24,0,0">
                     <Label.FormattedText>
@@ -43,8 +47,12 @@
                 </Label>
                 <Button Margin="0,10,0,0" Text="Learn more"
                         Command="{Binding OpenWebCommand}"
-                        BackgroundColor="{StaticResource Primary}"
+                        BackgroundColor="{AppThemeBinding Dark=blue,Light=orange}"
                         TextColor="White" />
+                <StackLayout Orientation="Horizontal">
+                    <Label FontSize="Medium" Text="Тёмная тема" Margin="10,0"></Label>
+                    <Switch IsToggled="{Binding IsToggled, Mode=TwoWay}" Scale="1.4"/>
+                </StackLayout>
             </StackLayout>
         </ScrollView>
     </Grid>

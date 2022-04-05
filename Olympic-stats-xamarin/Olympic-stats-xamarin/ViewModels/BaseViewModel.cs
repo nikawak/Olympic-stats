@@ -10,7 +10,7 @@ namespace Olympic_stats_xamarin.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Item> DataStore => DependencyService.Get<IDataStore<Item>>();
+        public IDataStore<Sportsman> DataStore => DependencyService.Get<IDataStore<Sportsman>>();
 
         bool isBusy = false;
         public bool IsBusy

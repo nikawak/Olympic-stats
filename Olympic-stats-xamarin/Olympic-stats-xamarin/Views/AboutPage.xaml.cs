@@ -10,6 +10,7 @@ namespace Olympic_stats_xamarin.Views
         public AboutPage()
         {
             InitializeComponent();
+
         }
     }
 }

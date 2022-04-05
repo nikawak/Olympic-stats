@@ -7,7 +7,6 @@ D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Deb
 D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
 D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
 D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
-D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Debug\netstandard2.0\Views\ItemsPage.xaml.g.cs
 D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
 D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
 D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Debug\netstandard2.0\Olympic-stats-xamarin.AssemblyInfoInputs.cache
@@ -18,3 +17,6 @@ D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Deb
 D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Debug\netstandard2.0\refint\Olympic-stats-xamarin.dll
 D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Debug\netstandard2.0\Olympic-stats-xamarin.pdb
 D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Debug\netstandard2.0\ref\Olympic-stats-xamarin.dll
+D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Debug\netstandard2.0\Views\SportsmansPage.xaml.g.cs
+D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\bin\Debug\netstandard2.0\Windows.Foundation.UniversalApiContract.winmd
+D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Debug\netstandard2.0\Olympic-stats-xamarin.csproj.CopyComplete

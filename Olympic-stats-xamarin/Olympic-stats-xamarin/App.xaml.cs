@@ -1,6 +1,8 @@
 ﻿using Olympic_stats_xamarin.Services;
+using Olympic_stats_xamarin.Models;
 using Olympic_stats_xamarin.Views;
 using System;
+using Xamarin.Essentials;
 using Xamarin.Forms;
 using Xamarin.Forms.Xaml;
 
@@ -19,14 +21,18 @@ namespace Olympic_stats_xamarin
 
         protected override void OnStart()
         {
+            Settings.SetSettings();
         }
 
         protected override void OnSleep()
         {
+            Settings.SetSettings();
         }
 
         protected override void OnResume()
         {
+            Settings.SetSettings();
         }
+
     }
 }

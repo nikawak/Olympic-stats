@@ -9,8 +9,31 @@ namespace Olympic_stats_xamarin.ViewModels
 {
     public class NewItemViewModel : BaseViewModel
     {
-        private string text;
-        private string description;
+        private string name;
+        private string surName; 
+        private string functionalClass; 
+        private string sex; 
+
+        /*public string Name
+        {
+            get => name;
+            set => name = value;
+        }
+        public string SurName
+        {
+            get => surName;
+            set => surName = value;
+        }
+        public string FunctionalClass
+        {
+            get => functionalClass;
+            set => functionalClass = value;
+        }
+        public string Sex
+        {
+            get => sex;
+            set => sex = value;
+        }*/
 
         public NewItemViewModel()
         {
@@ -22,20 +45,32 @@ namespace Olympic_stats_xamarin.ViewModels
 
         private bool ValidateSave()
         {
-            return !String.IsNullOrWhiteSpace(text)
-                && !String.IsNullOrWhiteSpace(description);
+            return name != null
+                && surName != null
+                && functionalClass != null
+                && sex != null;
         }
 
-        public string Text
+        public string Name
         {
-            get => text;
-            set => SetProperty(ref text, value);
+            get => name;
+            set => SetProperty(ref name, value);
+        }
+         public string SurName
+        {
+            get => surName;
+            set => SetProperty(ref surName, value);
+        }
+         public string FunctionalClass
+        {
+            get => functionalClass;
+            set => SetProperty(ref functionalClass, value);
         }
 
-        public string Description
+        public string Sex
         {
-            get => description;
-            set => SetProperty(ref description, value);
+            get => sex;
+            set => SetProperty(ref sex, value);
         }
 
         public Command SaveCommand { get; }
@@ -49,16 +84,18 @@ namespace Olympic_stats_xamarin.ViewModels
 
         private async void OnSave()
         {
-            Item newItem = new Item()
+            Sportsman newItem = new Sportsman()
             {
-                Id = Guid.NewGuid().ToString(),
-                Text = Text,
-                Description = Description
+                Name = name,
+                SurName = surName,
+                FunctionalClass = functionalClass,
+                Sex = sex
             };
-
+            
             await DataStore.AddItemAsync(newItem);
 
             // This will pop the current page off the navigation stack
+
             await Shell.Current.GoToAsync("..");
         }
     }

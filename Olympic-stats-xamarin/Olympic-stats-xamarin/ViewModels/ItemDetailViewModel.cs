@@ -9,44 +9,65 @@ namespace Olympic_stats_xamarin.ViewModels
     [QueryProperty(nameof(ItemId), nameof(ItemId))]
     public class ItemDetailViewModel : BaseViewModel
     {
-        private string itemId;
-        private string text;
-        private string description;
-        public string Id { get; set; }
-
-        public string Text
+        /*public ItemDetailViewModel()
         {
-            get => text;
-            set => SetProperty(ref text, value);
+            BindingContext = ElephantData.Elephants.FirstOrDefault(m => m.Name == Uri.UnescapeDataString(value));
+        }*/
+
+        private string id;
+        private string name;
+        private string surName;
+        private string functionalClass;
+        private string sex;
+
+
+        public string Name
+        {
+            get => name;
+            set => SetProperty(ref name, value);
+        }
+        public string SurName
+        {
+            get => surName;
+            set => SetProperty(ref surName, value);
+        }
+        public string FunctionalClass
+        {
+            get => functionalClass;
+            set => SetProperty(ref functionalClass, value);
         }
 
-        public string Description
+        public string Sex
         {
-            get => description;
-            set => SetProperty(ref description, value);
+            get => sex;
+            set => SetProperty(ref sex, value);
         }
+
 
         public string ItemId
         {
             get
             {
-                return itemId;
+                return id;
             }
             set
             {
-                itemId = value;
+                id = value;
                 LoadItemId(value);
             }
         }
 
-        public async void LoadItemId(string itemId)
+        public async void LoadItemId(string ItemId)
         {
             try
             {
-                var item = await DataStore.GetItemAsync(itemId);
-                Id = item.Id;
-                Text = item.Text;
-                Description = item.Description;
+                var Item = await DataStore.GetItemAsync(ItemId);
+                id = Item.Id;
+                Name = Item.Name;
+                SurName = Item.SurName;
+                FunctionalClass = Item.FunctionalClass;
+                Sex = Item.Sex;
+                
             }
             catch (Exception)
             {

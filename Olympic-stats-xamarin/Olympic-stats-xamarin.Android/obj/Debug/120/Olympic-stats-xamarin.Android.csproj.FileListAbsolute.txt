@@ -630,3 +630,5 @@ D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.Android
 D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.Android\obj\Debug\120\stamp\_GenerateJavaStubs.stamp
 D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.Android\obj\Debug\120\stamp\_GeneratePackageManagerJava.stamp
 D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.Android\obj\Debug\120\stamp\_ResolveLibraryProjectImports.stamp
+D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.Android\obj\Debug\120\res\drawable\img.png
+D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.Android\obj\Debug\120\res\drawable\cursed_cat.png

@@ -1,0 +1,77 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Olympic_stats_xamarin.Views.ItemsPage"
+             Title="{Binding Title}"
+             xmlns:local="clr-namespace:Olympic_stats_xamarin.ViewModels"  
+             xmlns:model="clr-namespace:Olympic_stats_xamarin.Models"  
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
+             x:Name="BrowseItemsPage">
+
+
+    <ContentPage.BindingContext>
+        <local:ItemsViewModel />
+    </ContentPage.BindingContext>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Refresh" Command="{Binding LoadItemsCommand}" />
+        <ToolbarItem Text="Add" Command="{Binding AddItemCommand}" />
+    </ContentPage.ToolbarItems>
+    <!--
+      x:DataType enables compiled bindings for better performance and compile time validation of binding expressions.
+      https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/data-binding/compiled-bindings
+    -->
+    
+    <RefreshView BackgroundColor="gray" x:DataType="local:ItemsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+        <CollectionView x:Name="ItemsListView"
+                ItemsSource="{Binding ListSportsmans}"
+                SelectionMode="Single">
+            <CollectionView.ItemTemplate>
+                <DataTemplate>
+                    <StackLayout Padding="10" x:DataType="model:Sportsman">
+                        <Frame BackgroundColor="LightGray" CornerRadius="20" HasShadow="True">
+                            <StackLayout Orientation="Horizontal">
+                                <Frame CornerRadius="15" HasShadow="True">
+                                    <Image Source="{Binding Image}" HeightRequest="{OnPlatform Default=120,Android=66}" WidthRequest="{OnPlatform Default=120,Android=66}"/>
+                                </Frame>
+                                <StackLayout VerticalOptions="Center">
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label TextColor="Black"
+                                        FontSize="Large"
+                                        Text="{Binding Name}"
+                                        VerticalOptions="Center" />
+                                        <Label TextColor="Black"
+                                        FontSize="Large"
+                                        Text="{Binding SurName}"
+                                        VerticalOptions="Center" />
+                                    </StackLayout>
+
+                                    <StackLayout Orientation="Horizontal">
+                                        <Label TextColor="Black"
+                                        FontSize="Small"
+                                        Text="{Binding FunctionalClass}"
+                                        VerticalOptions="Center" />
+                                        <Label TextColor="Black"
+                                        FontSize="Small"
+                                        Text="{Binding Sex}"
+                                        VerticalOptions="Center" />
+                                    </StackLayout>
+                                </StackLayout>
+                            </StackLayout>
+                        </Frame>
+                        <StackLayout.GestureRecognizers>
+                            <TapGestureRecognizer 
+                                NumberOfTapsRequired="1"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:ItemsViewModel}}, Path=ItemTapped}"		
+                                CommandParameter="{Binding .}">
+                            </TapGestureRecognizer>
+                        </StackLayout.GestureRecognizers>
+                    </StackLayout>
+                </DataTemplate>
+            </CollectionView.ItemTemplate>
+        </CollectionView>
+    </RefreshView> 
+
+
+</ContentPage>

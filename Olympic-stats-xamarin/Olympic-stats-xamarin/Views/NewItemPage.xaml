@@ -5,18 +5,58 @@
              Shell.PresentationMode="ModalAnimated"
              Title="New Item"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
+             xmlns:viewmodels="clr-namespace:Olympic_stats_xamarin.ViewModels" x:DataType="viewmodels:NewItemViewModel"
              ios:Page.UseSafeArea="true">
+
+
     <ContentPage.Content>
+        
         <StackLayout Spacing="3" Padding="15">
-            <Label Text="Text" FontSize="Medium" />
-            <Entry Text="{Binding Text, Mode=TwoWay}" FontSize="Medium" />
-            <Label Text="Description" FontSize="Medium" />
-            <Editor Text="{Binding Description, Mode=TwoWay}" AutoSize="TextChanges" FontSize="Medium" Margin="0" />
-            <StackLayout Orientation="Horizontal">
-                <Button Text="Cancel" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand"></Button>
-                <Button Text="Save" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand"></Button>
+                <Label Text="Имя" FontSize="Medium" />
+                <Entry Text="{Binding Name, Mode=TwoWay}" FontSize="Default" />
+                <Label Text="Фамилия" FontSize="Medium" />
+                <Entry Text="{Binding SurName, Mode=TwoWay}" FontSize="Medium" />
+                <Label Text="Функцинальный класс" FontSize="Medium" />
+                <Picker SelectedItem="{Binding FunctionalClass}" FontSize="Medium">
+                    <Picker.Items>
+                        <x:String>T11</x:String>
+                        <x:String>T12</x:String>
+                        <x:String>T13</x:String>
+                        <x:String>T14</x:String>
+                        <x:String>T15</x:String>
+                        <x:String>T16</x:String>
+                        <x:String>T17</x:String>
+                        <x:String>T18</x:String>
+                        <x:String>T19</x:String>
+                        <x:String>T20</x:String>
+                        <x:String>T21</x:String>
+                        <x:String>T22</x:String>
+                        <x:String>T23</x:String>
+                        <x:String>T24</x:String>
+                        <x:String>T25</x:String>
+                        <x:String>T26</x:String>
+                        <x:String>T27</x:String>
+                        <x:String>T28</x:String>
+                        <x:String>T29</x:String>
+                        <x:String>T30</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <Label Text="Пол" FontSize="Medium" />
+                <Picker SelectedItem="{Binding Sex}" FontSize="Medium">
+                    <Picker.Items>
+                        <x:String>Мужской</x:String>
+                        <x:String>Женский</x:String>
+                    </Picker.Items>
+                </Picker>
+
+                <StackLayout Orientation="Horizontal">
+                    <Button Text="Cancel" FontSize="Medium" Command="{Binding CancelCommand}" HorizontalOptions="FillAndExpand" Padding="10" Margin="10"></Button>
+                    <Button Text="Save" FontSize="Medium" Command="{Binding SaveCommand}" HorizontalOptions="FillAndExpand" Padding="10" Margin="10"></Button>
+                </StackLayout>
+
             </StackLayout>
-        </StackLayout>
+            
     </ContentPage.Content>
     
 </ContentPage>
