@@ -9,16 +9,27 @@ namespace Olympic_stats_xamarin.ViewModels
     [QueryProperty(nameof(ItemId), nameof(ItemId))]
     public class ItemDetailViewModel : BaseViewModel
     {
-        /*public ItemDetailViewModel()
-        {
-            BindingContext = ElephantData.Elephants.FirstOrDefault(m => m.Name == Uri.UnescapeDataString(value));
-        }*/
-
         private string id;
         private string name;
         private string surName;
         private string functionalClass;
         private string sex;
+        private ImageSource image;
+
+        private Sportsman Sportsman;
+
+        public ItemDetailViewModel()
+        {
+            Title = "Change parametrs";
+            SaveCommand = new Command(OnSave, OnValidate);
+            CancelCommand = new Command(OnBack);
+            DeleteCommand = new Command(OnDelete);
+        }
+
+        public Command CancelCommand { get; }
+        public Command SaveCommand { get; }
+        public Command DeleteCommand { get; }
+
 
 
         public string Name
@@ -41,6 +52,11 @@ namespace Olympic_stats_xamarin.ViewModels
         {
             get => sex;
             set => SetProperty(ref sex, value);
+        }
+        public ImageSource Image
+        {
+            get => image;
+            set => SetProperty(ref image, value);
         }
 
 
@@ -67,12 +83,36 @@ namespace Olympic_stats_xamarin.ViewModels
                 SurName = Item.SurName;
                 FunctionalClass = Item.FunctionalClass;
                 Sex = Item.Sex;
-                
+                Image = Item.Image;
+
+
             }
             catch (Exception)
             {
                 Debug.WriteLine("Failed to Load Item");
             }
         }
+        public async void OnBack()
+        {
+            await Shell.Current.GoToAsync("..");
+        }
+        public async void OnSave()
+        {
+            Sportsman = new Sportsman()
+            { Id = id, Name = name, SurName = surName, FunctionalClass = functionalClass, Sex = sex, Image = image };
+
+            await DataStore.UpdateItemAsync(Sportsman);
+            await Shell.Current.GoToAsync("..");
+        }
+        public async void OnDelete()
+        {
+            await DataStore.DeleteItemAsync(id);
+            await Shell.Current.GoToAsync("..");
+        }
+        public bool OnValidate()
+        {
+            return true;
+        }
+
     }
 }

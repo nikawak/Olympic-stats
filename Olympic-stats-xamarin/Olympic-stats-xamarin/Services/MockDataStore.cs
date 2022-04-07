@@ -15,9 +15,9 @@ namespace Olympic_stats_xamarin.Services
         {
             Items = new List<Sportsman>()
             {
-                new Sportsman() { Id = 1.ToString(), Name = "Item 1", SurName="Surname 1", FunctionalClass="T32", Sex="Мужской", Image = "cursed_cat.png" },
+                new Sportsman() { Id = 1.ToString(), Name = "Item 1", SurName="Surname 1", FunctionalClass="T11", Sex="Мужской", Image = "cursed_cat.png" },
                 new Sportsman() { Id = 2.ToString(), Name = "Item 2", SurName="Surname 2", FunctionalClass="T12", Sex="Женский", Image = "img.png" },
-                new Sportsman() { Id = 3.ToString(), Name = "Item 3", SurName="Surname 3", FunctionalClass="T39", Sex="Мужской", Image = "cursed_cat.png" },
+                new Sportsman() { Id = 3.ToString(), Name = "Item 3", SurName="Surname 3", FunctionalClass="F13", Sex="Мужской", Image = "cursed_cat.png" },
                 new Sportsman() { Id = 4.ToString(), Name = "Item 4", SurName="Surname 4", FunctionalClass="F11", Sex="Мужской", Image = "img.png" },
             };
         }
@@ -32,8 +32,8 @@ namespace Olympic_stats_xamarin.Services
         public async Task<bool> UpdateItemAsync(Sportsman Item)
         {
             var oldItem = Items.Where((Sportsman arg) => arg.Id == Item.Id).FirstOrDefault();
-            Items.Remove(oldItem);
-            Items.Add(Item);
+            var index = Items.IndexOf(oldItem);
+            Items[index] = Item;
 
             return await Task.FromResult(true);
         }

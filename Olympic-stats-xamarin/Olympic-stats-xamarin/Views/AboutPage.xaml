@@ -4,7 +4,7 @@
              x:Class="Olympic_stats_xamarin.Views.AboutPage"
              xmlns:vm="clr-namespace:Olympic_stats_xamarin.ViewModels"
              Title="{Binding Title}"
-             BackgroundColor="{AppThemeBinding Dark=#0000ff, Light=#ffff00}">
+             BackgroundColor="{AppThemeBinding Dark=#1E1E1E, Light=white}">
     
     <ContentPage.BindingContext>
         <vm:AboutViewModel />
@@ -33,9 +33,8 @@
         </StackLayout>
         <ScrollView Grid.Row="1">
             <StackLayout Orientation="Vertical" Padding="30,24,30,24" Spacing="10">
-                <Label Text="{Binding str}" FontSize="Title"/>
-                <Label Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="0,0,0,0"/>
-                <Label FontSize="16" Padding="0,24,0,0">
+                <Label TextColor="{AppThemeBinding Dark=white, Light=#1E1E1E}" Text="Make changes to your XAML file and save to see your UI update in the running app with XAML Hot Reload. Give it a try!" FontSize="16" Padding="0,0,0,0"/>
+                <Label TextColor="{AppThemeBinding Dark=white, Light=#1E1E1E}" FontSize="16" Padding="0,24,0,0">
                     <Label.FormattedText>
                         <FormattedString>
                             <FormattedString.Spans>
@@ -50,8 +49,8 @@
                         BackgroundColor="{AppThemeBinding Dark=blue,Light=orange}"
                         TextColor="White" />
                 <StackLayout Orientation="Horizontal">
-                    <Label FontSize="Medium" Text="Тёмная тема" Margin="10,0"></Label>
-                    <Switch IsToggled="{Binding IsToggled, Mode=TwoWay}" Scale="1.4"/>
+                    <Label TextColor="{AppThemeBinding Dark=white, Light=#1E1E1E}" FontSize="Medium" Text="Тёмная тема" Margin="10,0"></Label>
+                    <Switch BackgroundColor="{AppThemeBinding Dark=white, Light=#1E1E1E}" IsToggled="{Binding IsToggled, Mode=TwoWay}" Scale="1.4"/>
                 </StackLayout>
             </StackLayout>
         </ScrollView>

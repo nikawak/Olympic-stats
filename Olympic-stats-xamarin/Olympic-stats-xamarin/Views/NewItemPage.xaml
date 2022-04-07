@@ -6,7 +6,8 @@
              Title="New Item"
              xmlns:ios="clr-namespace:Xamarin.Forms.PlatformConfiguration.iOSSpecific;assembly=Xamarin.Forms.Core"
              xmlns:viewmodels="clr-namespace:Olympic_stats_xamarin.ViewModels" x:DataType="viewmodels:NewItemViewModel"
-             ios:Page.UseSafeArea="true">
+             ios:Page.UseSafeArea="true"
+             BackgroundColor="{AppThemeBinding Dark=#1E1E1E, Light=white}">
 
 
     <ContentPage.Content>
@@ -22,24 +23,11 @@
                         <x:String>T11</x:String>
                         <x:String>T12</x:String>
                         <x:String>T13</x:String>
-                        <x:String>T14</x:String>
-                        <x:String>T15</x:String>
-                        <x:String>T16</x:String>
-                        <x:String>T17</x:String>
-                        <x:String>T18</x:String>
-                        <x:String>T19</x:String>
-                        <x:String>T20</x:String>
-                        <x:String>T21</x:String>
-                        <x:String>T22</x:String>
-                        <x:String>T23</x:String>
-                        <x:String>T24</x:String>
-                        <x:String>T25</x:String>
-                        <x:String>T26</x:String>
-                        <x:String>T27</x:String>
-                        <x:String>T28</x:String>
-                        <x:String>T29</x:String>
-                        <x:String>T30</x:String>
-                    </Picker.Items>
+                        <x:String>F11</x:String>
+                        <x:String>F12</x:String>
+                        <x:String>F13</x:String>
+
+                </Picker.Items>
                 </Picker>
 
                 <Label Text="Пол" FontSize="Medium" />

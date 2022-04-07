@@ -6,7 +6,8 @@
              xmlns:local="clr-namespace:Olympic_stats_xamarin.ViewModels"  
              xmlns:model="clr-namespace:Olympic_stats_xamarin.Models"  
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
-             x:Name="BrowseItemsPage">
+             x:Name="BrowseItemsPage"
+             BackgroundColor="{AppThemeBinding Dark=#1E1E1E, Light=white}">
 
 
     <ContentPage.BindingContext>
