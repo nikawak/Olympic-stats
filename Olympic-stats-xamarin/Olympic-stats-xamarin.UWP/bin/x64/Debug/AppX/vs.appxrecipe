@@ -30,17 +30,53 @@
     <AppXManifest Include="D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-07T18:16:46.083</Modified>
+      <Modified>2022-04-26T02:38:46.552</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\bin\x64\Debug\Olympic-stats-xamarin.UWP.exe">
       <PackagePath>entrypoint\Olympic-stats-xamarin.UWP.exe</PackagePath>
-      <Modified>2022-04-07T18:16:40.106</Modified>
+      <Modified>2022-04-26T02:38:40.453</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Никита\.nuget\packages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
       <Modified>2021-02-05T01:15:54.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Никита\.nuget\packages\sqlite-net-pcl\1.8.116\lib\netstandard2.0\SQLite-net.dll">
+      <PackagePath>SQLite-net.dll</PackagePath>
+      <Modified>2021-09-02T21:04:32.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Никита\.nuget\packages\sqlitepclraw.bundle_green\2.0.4\lib\netstandard2.0\SQLitePCLRaw.batteries_v2.dll">
+      <PackagePath>SQLitePCLRaw.batteries_v2.dll</PackagePath>
+      <Modified>2020-09-03T17:13:26.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Никита\.nuget\packages\sqlitepclraw.core\2.0.4\lib\netstandard2.0\SQLitePCLRaw.core.dll">
+      <PackagePath>SQLitePCLRaw.core.dll</PackagePath>
+      <Modified>2020-09-03T17:13:04.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Никита\.nuget\packages\sqlitepclraw.lib.e_sqlite3\2.0.4\runtimes\win10-x64\nativeassets\uap10.0\e_sqlite3.dll">
+      <PackagePath>e_sqlite3.dll</PackagePath>
+      <Modified>2020-08-17T14:39:00.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Никита\.nuget\packages\sqlitepclraw.provider.e_sqlite3\2.0.4\lib\uap10.0\SQLitePCLRaw.provider.e_sqlite3.dll">
+      <PackagePath>SQLitePCLRaw.provider.e_sqlite3.dll</PackagePath>
+      <Modified>2020-09-03T17:13:06.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Никита\.nuget\packages\system.data.sqlclient\4.8.3\runtimes\win\lib\uap10.0.16299\System.Data.SqlClient.dll">
+      <PackagePath>System.Data.SqlClient.dll</PackagePath>
+      <Modified>2021-08-16T19:22:30.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Никита\.nuget\packages\system.diagnostics.diagnosticsource\4.7.0\lib\netstandard1.3\System.Diagnostics.DiagnosticSource.dll">
+      <PackagePath>System.Diagnostics.DiagnosticSource.dll</PackagePath>
+      <Modified>2019-11-15T08:54:44.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Никита\.nuget\packages\system.runtime.compilerservices.unsafe\4.7.0\lib\netstandard2.0\System.Runtime.CompilerServices.Unsafe.dll">
+      <PackagePath>System.Runtime.CompilerServices.Unsafe.dll</PackagePath>
+      <Modified>2019-11-15T08:37:58.000</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Никита\.nuget\packages\system.text.encoding.codepages\4.7.0\runtimes\win\lib\netstandard2.0\System.Text.Encoding.CodePages.dll">
+      <PackagePath>System.Text.Encoding.CodePages.dll</PackagePath>
+      <Modified>2019-11-15T08:53:52.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Никита\.nuget\packages\win2d.uwp\1.20.0\runtimes\win10-x64\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
@@ -68,7 +104,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\bin\Debug\netstandard2.0\Olympic-stats-xamarin.dll">
       <PackagePath>Olympic-stats-xamarin.dll</PackagePath>
-      <Modified>2022-04-07T18:23:50.707</Modified>
+      <Modified>2022-04-26T02:41:10.985</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Никита\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
@@ -247,11 +283,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-04-07T18:16:39.935</Modified>
+      <Modified>2022-04-26T02:38:40.279</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-04-07T18:16:39.935</Modified>
+      <Modified>2022-04-26T02:38:40.279</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\X64\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -267,11 +303,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-04-06T16:25:30.390</Modified>
+      <Modified>2022-04-25T10:36:20.140</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\bin\x64\Debug\Core\Olympic-stats-xamarin.UWP.exe">
       <PackagePath>Olympic-stats-xamarin.UWP.exe</PackagePath>
-      <Modified>2022-04-07T18:16:46.067</Modified>
+      <Modified>2022-04-26T02:38:46.514</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

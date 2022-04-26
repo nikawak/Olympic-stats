@@ -1,0 +1,43 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:Olympic_stats_xamarin.ViewModels"  
+             xmlns:model="clr-namespace:Olympic_stats_xamarin.Helpers"  
+             x:Class="Olympic_stats_xamarin.Views.RegistrationPage"
+             Shell.PresentationMode="ModalAnimated"
+             Title="{Binding Title}"
+             x:DataType="viewmodels:RegistrationViewModel"
+             Shell.NavBarIsVisible="False">
+
+    <ContentPage.BindingContext>
+        <viewmodels:RegistrationViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Resources>
+        <Style TargetType="Page">
+            <Setter Property="BackgroundColor" 
+                        Value="{AppThemeBinding 
+                        Dark={StaticResource BgPageDark}, 
+                        Light={StaticResource BgPageLight}}"/>
+        </Style>
+    </ContentPage.Resources>
+
+    <ContentPage.Content>
+        <StackLayout Style="{StaticResource StackLayoutDefault}">
+            <Label Text="Чтобы начать пользоваться приложением, вам надо создать создать аккаунт"/>
+            
+            <Label/>
+            <Entry Margin="70,5"/>
+            <Label/>
+            <Entry Margin="70,5"/>
+            <Label/>
+            <Entry Margin="70,5"/>
+            <Label/>
+            <Entry Margin="70,5"/>
+            <Label/>
+            <!--<model:SliderLabel Maximum="99" Minimum="18" Margin="70,5"/>-->
+            <Label FontSize="Medium" Text="Есть аккаунт?"/>
+            <Button FontSize="Medium" Text="Авторизироваться" Command="{Binding LoginCommand}"/>
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>

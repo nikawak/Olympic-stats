@@ -1,10 +1,18 @@
 {
   "version": 2,
-  "dgSpecHash": "wiJ/GhPQnbHEVj2RAIuO+KMg+QpEA32Dyr6+QiH04Sz7RahxjpHH/Pt9962M7pC+LPoyS6ewKHWd7/64dzVg8Q==",
+  "dgSpecHash": "p4D8dKe2sNxorVCYbQ4+8toP0daYx9i3UCgfCowSV1cGw13YDF0eoi8lGlXt8ABN4yE8OXUkpyhZ3cGLohVtVw==",
   "success": true,
   "projectFilePath": "D:\\Programming\\Olympic-stats\\Olympic-stats-xamarin\\Olympic-stats-xamarin.iOS\\Olympic-stats-xamarin.iOS.csproj",
   "expectedPackageFiles": [
+    "C:\\Users\\Никита\\.nuget\\packages\\sqlite-net-pcl\\1.8.116\\sqlite-net-pcl.1.8.116.nupkg.sha512",
+    "C:\\Users\\Никита\\.nuget\\packages\\sqlitepclraw.bundle_green\\2.0.4\\sqlitepclraw.bundle_green.2.0.4.nupkg.sha512",
+    "C:\\Users\\Никита\\.nuget\\packages\\sqlitepclraw.core\\2.0.4\\sqlitepclraw.core.2.0.4.nupkg.sha512",
+    "C:\\Users\\Никита\\.nuget\\packages\\sqlitepclraw.provider.dynamic_cdecl\\2.0.4\\sqlitepclraw.provider.dynamic_cdecl.2.0.4.nupkg.sha512",
+    "C:\\Users\\Никита\\.nuget\\packages\\system.buffers\\4.4.0\\system.buffers.4.4.0.nupkg.sha512",
+    "C:\\Users\\Никита\\.nuget\\packages\\system.data.sqlclient\\4.8.3\\system.data.sqlclient.4.8.3.nupkg.sha512",
+    "C:\\Users\\Никита\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\Никита\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
+    "C:\\Users\\Никита\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
     "C:\\Users\\Никита\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
     "C:\\Users\\Никита\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
   ],

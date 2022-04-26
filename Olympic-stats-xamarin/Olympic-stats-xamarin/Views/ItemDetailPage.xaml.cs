@@ -4,9 +4,9 @@ using Xamarin.Forms;
 
 namespace Olympic_stats_xamarin.Views
 {
-    public partial class ItemDetailPage : ContentPage
+    public partial class SportsmanEditPage : ContentPage
     {
-        public ItemDetailPage()
+        public SportsmanEditPage()
         {
             InitializeComponent();
             BindingContext = new ItemDetailViewModel();

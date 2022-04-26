@@ -12,15 +12,15 @@ using Xamarin.Forms.Xaml;
 
 namespace Olympic_stats_xamarin.Views
 {
-    public partial class ItemsPage : ContentPage
+    public partial class SportsmansPage : ContentPage
     {
-        ItemsViewModel _viewModel;
+        SportsmansViewModel _viewModel;
 
-        public ItemsPage()
+        public SportsmansPage()
         {
             InitializeComponent();
 
-            BindingContext = _viewModel = new ItemsViewModel();
+            BindingContext = _viewModel = new SportsmansViewModel();
         }
 
         protected override void OnAppearing()

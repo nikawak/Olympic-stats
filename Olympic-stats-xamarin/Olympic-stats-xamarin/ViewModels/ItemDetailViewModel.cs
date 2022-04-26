@@ -9,12 +9,12 @@ namespace Olympic_stats_xamarin.ViewModels
     [QueryProperty(nameof(ItemId), nameof(ItemId))]
     public class ItemDetailViewModel : BaseViewModel
     {
-        private string id;
+        private int id;
         private string name;
         private string surName;
         private string functionalClass;
         private string sex;
-        private ImageSource image;
+        private string image;
 
         private Sportsman Sportsman;
 
@@ -53,14 +53,14 @@ namespace Olympic_stats_xamarin.ViewModels
             get => sex;
             set => SetProperty(ref sex, value);
         }
-        public ImageSource Image
+        public string Image
         {
             get => image;
             set => SetProperty(ref image, value);
         }
 
 
-        public string ItemId
+        public int ItemId
         {
             get
             {
@@ -73,7 +73,7 @@ namespace Olympic_stats_xamarin.ViewModels
             }
         }
 
-        public async void LoadItemId(string ItemId)
+        public async void LoadItemId(int ItemId)
         {
             try
             {
@@ -114,5 +114,16 @@ namespace Olympic_stats_xamarin.ViewModels
             return true;
         }
 
+
+        private bool isChecked;
+        public bool IsChecked
+        {
+            get { return isChecked; }
+            set 
+            { 
+                isChecked = value;
+                OnPropertyChanged();
+            }
+        }
     }
 }

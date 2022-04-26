@@ -5,10 +5,8 @@ D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Deb
 D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Debug\netstandard2.0\Olympic-stats-xamarin.GeneratedMSBuildEditorConfig.editorconfig
 D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Debug\netstandard2.0\App.xaml.g.cs
 D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Debug\netstandard2.0\AppShell.xaml.g.cs
-D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Debug\netstandard2.0\Views\AboutPage.xaml.g.cs
 D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Debug\netstandard2.0\Views\ItemDetailPage.xaml.g.cs
 D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Debug\netstandard2.0\Views\LoginPage.xaml.g.cs
-D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Debug\netstandard2.0\Views\NewItemPage.xaml.g.cs
 D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Debug\netstandard2.0\Olympic-stats-xamarin.AssemblyInfoInputs.cache
 D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Debug\netstandard2.0\Olympic-stats-xamarin.AssemblyInfo.cs
 D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Debug\netstandard2.0\Olympic-stats-xamarin.csproj.CoreCompileInputs.cache
@@ -20,3 +18,7 @@ D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Deb
 D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Debug\netstandard2.0\Views\SportsmansPage.xaml.g.cs
 D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\bin\Debug\netstandard2.0\Windows.Foundation.UniversalApiContract.winmd
 D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Debug\netstandard2.0\Olympic-stats-xamarin.csproj.CopyComplete
+D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Debug\netstandard2.0\Views\NewSportsmanPage.xaml.g.cs
+D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Debug\netstandard2.0\Views\RegistrationPage.xaml.g.cs
+D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Debug\netstandard2.0\Views\SettingsPage.xaml.g.cs
+D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Debug\netstandard2.0\Views\ResultsPage.xaml.g.cs

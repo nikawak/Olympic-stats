@@ -2,19 +2,19 @@
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
              xmlns:viewmodels="clr-namespace:Olympic_stats_xamarin.ViewModels"
-             x:Class="Olympic_stats_xamarin.Views.ItemDetailPage"
+             x:Class="Olympic_stats_xamarin.Views.SportsmanEditPage"
              Title="{Binding Title}"
-             x:DataType="viewmodels:ItemDetailViewModel"
-             BackgroundColor="{AppThemeBinding Dark=#1E1E1E, Light=white}">
+             x:DataType="viewmodels:ItemDetailViewModel">
+
     <ContentPage.BindingContext>
         <viewmodels:ItemDetailViewModel/>
     </ContentPage.BindingContext>
 
-    <StackLayout Spacing="3" Padding="15">
+    <StackLayout Style="{StaticResource StackLayoutDefault}" Spacing="3" Padding="15">
         <Label Text="Имя" FontSize="Medium" />
-        <Entry Text="{Binding Name, Mode=TwoWay}" FontSize="Medium" />
+        <Entry Text="{Binding Name}" FontSize="Medium" />
         <Label Text="Фамилия" FontSize="Medium" />
-        <Entry Text="{Binding SurName, Mode=TwoWay}" FontSize="Medium" />
+        <Entry Text="{Binding SurName}" FontSize="Medium" />
         <Label Text="Функциональный класс" FontSize="Medium" />
         <Picker SelectedItem="{Binding FunctionalClass}" FontSize="Medium">
             <Picker.Items>
@@ -37,6 +37,6 @@
 
         <Button Text="Отмена" Command="{Binding CancelCommand}"/>
         <Button Text="Сохранить" Command="{Binding SaveCommand}"/>
-        <Button BackgroundColor="DarkRed" Text="Удалить" Command="{Binding SaveCommand}"/>
+        <Button BackgroundColor="DarkRed" Text="Удалить" Command="{Binding DeleteCommand}"/>
     </StackLayout>
 </ContentPage>

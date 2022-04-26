@@ -8,17 +8,17 @@
 // </auto-generated>
 //------------------------------------------------------------------------------
 
-[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Olympic-stats-xamarin.Views.ItemDetailPage.xaml", "Views/ItemDetailPage.xaml", typeof(global::Olympic_stats_xamarin.Views.ItemDetailPage))]
+[assembly: global::Xamarin.Forms.Xaml.XamlResourceIdAttribute("Olympic-stats-xamarin.Views.ItemDetailPage.xaml", "Views/ItemDetailPage.xaml", typeof(global::Olympic_stats_xamarin.Views.SportsmanEditPage))]
 
 namespace Olympic_stats_xamarin.Views {
     
     
     [global::Xamarin.Forms.Xaml.XamlFilePathAttribute("Views\\ItemDetailPage.xaml")]
-    public partial class ItemDetailPage : global::Xamarin.Forms.ContentPage {
+    public partial class SportsmanEditPage : global::Xamarin.Forms.ContentPage {
         
         [global::System.CodeDom.Compiler.GeneratedCodeAttribute("Xamarin.Forms.Build.Tasks.XamlG", "2.0.0.0")]
         private void InitializeComponent() {
-            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(ItemDetailPage));
+            global::Xamarin.Forms.Xaml.Extensions.LoadFromXaml(this, typeof(SportsmanEditPage));
         }
     }
 }

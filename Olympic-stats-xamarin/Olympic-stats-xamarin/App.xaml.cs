@@ -21,17 +21,14 @@ namespace Olympic_stats_xamarin
 
         protected override void OnStart()
         {
-            Settings.SetSettings();
         }
 
         protected override void OnSleep()
         {
-            Settings.SetSettings();
         }
 
         protected override void OnResume()
         {
-            Settings.SetSettings();
         }
 
     }

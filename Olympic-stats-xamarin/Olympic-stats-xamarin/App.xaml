@@ -1,13 +1,131 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <Application xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:local="clr-namespace:Olympic_stats_xamarin.ViewModels"
+             xmlns:helpers="clr-namespace:Olympic_stats_xamarin.Helpers"
              x:Class="Olympic_stats_xamarin.App">
     <!--
         Define global resources and styles here, that apply to all pages in your app.
     -->
     <Application.Resources>
         <ResourceDictionary>
+
+
+
+            <!-- Colors-->
             <Color x:Key="Primary">#2196F3</Color>
+
+            <Color x:Key="BgPageDark">#1F1F1F</Color>
+            <Color x:Key="BgElementsDark">#2E2E2E</Color>
+            <Color x:Key="TextDark">#FFF</Color>
+            <Color x:Key="BorderDark">#FFF</Color>
+
+            <Color x:Key="BgPageLight">#EFEFEF</Color>
+            <Color x:Key="BgElementsLight">#FFF</Color>
+            <Color x:Key="TextLight">#000</Color>
+            <Color x:Key="BorderLight">#B4B4B4</Color>
+
+            <Color x:Key="BgDinamic">#1F1F1F</Color>
+
+
+            <!-- Styles for themes-->
+            <Style TargetType="Label">
+                <Setter Property="TextColor" 
+                        Value="{AppThemeBinding 
+                        Dark={StaticResource TextDark}, 
+                        Light={StaticResource TextLight}}"/>
+            </Style>
+
+            <Style TargetType="Span">
+                <Setter Property="TextColor" 
+                        Value="{AppThemeBinding 
+                        Dark={StaticResource TextDark}, 
+                        Light={StaticResource TextLight}}"/>
+            </Style>
+
+            <Style TargetType="Page">
+                <Setter Property="BackgroundColor" 
+                        Value="{AppThemeBinding 
+                        Dark={StaticResource BgPageDark}, 
+                        Light={StaticResource BgPageLight}}"/>
+            </Style>
+
+            <Style TargetType="StackLayout" x:Key="StackLayoutDefault">
+                <Setter Property="BackgroundColor" 
+                        Value="{AppThemeBinding 
+                        Dark={StaticResource BgPageDark}, 
+                        Light={StaticResource BgPageLight}}"/>
+            </Style>
+            <Style TargetType="StackLayout" x:Key="StackLayoutNone">
+            </Style>
+
+            <Style TargetType="Entry">
+
+                <Setter Property="BackgroundColor" 
+                        Value="{AppThemeBinding 
+                        Dark={StaticResource BgElementsDark}, 
+                        Light={StaticResource BgElementsLight}}"/>
+                <Setter Property="PlaceholderColor" 
+                        Value="{AppThemeBinding 
+                        Dark={StaticResource BorderDark}, 
+                        Light={StaticResource BorderLight}}"/>
+                <Setter Property="TextColor" 
+                        Value="{AppThemeBinding 
+                        Dark={StaticResource TextDark}, 
+                        Light={StaticResource TextLight}}"/>
+                <Style.Triggers>
+                    <Trigger TargetType="Entry" Property="IsFocused" Value="True">
+                        <Setter Property="PlaceholderColor" Value="{StaticResource Primary}"/>
+                        <Setter Property="BackgroundColor"
+                                Value="{AppThemeBinding 
+                                Dark={StaticResource BgElementsDark}, 
+                                Light={StaticResource BgElementsLight}}"/>
+                    </Trigger>
+
+                    <Trigger TargetType="Entry" Property="IsFocused" Value="False">
+                        <Setter Property="PlaceholderColor"
+                                Value="{AppThemeBinding 
+                                Dark={StaticResource BorderDark}, 
+                                Light={StaticResource BorderLight}}"/>
+                        <Setter Property="BackgroundColor"
+                                Value="{AppThemeBinding 
+                                Dark={StaticResource BgPageDark}, 
+                                Light={StaticResource BgPageLight}}"/>
+                    </Trigger>
+
+                </Style.Triggers>
+            </Style>
+
+            <Style TargetType="CollectionView">
+                <Setter Property="BackgroundColor" 
+                        Value="{AppThemeBinding 
+                        Dark={StaticResource BgElementsDark}, 
+                        Light={StaticResource BgElementsLight}}"/>
+            </Style>
+
+            <Style TargetType="Picker">
+                <Setter Property="TextColor" 
+                        Value="{AppThemeBinding 
+                        Dark={StaticResource TextDark}, 
+                        Light={StaticResource TextLight}}"/>
+                <Setter Property="BackgroundColor"
+                        Value="{AppThemeBinding
+                        Dark={StaticResource BgElementsDark},
+                        Light={StaticResource BgElementsLight}}"/>
+            </Style>
+
+            <Style TargetType="Switch">
+                <Setter Property="OnColor" Value="{StaticResource Primary}"/>
+                <Setter Property="ThumbColor"
+                        Value="{AppThemeBinding
+                        Dark={StaticResource TextDark},
+                        Light={StaticResource TextLight}}"/>
+            </Style>
+
+
+
+
+            
             <Style TargetType="Button">
                 <Setter Property="TextColor" Value="White"></Setter>
                 <Setter Property="VisualStateManager.VisualStateGroups">
@@ -27,6 +145,9 @@
                     </VisualStateGroupList>
                 </Setter>
             </Style>
-        </ResourceDictionary>        
+
+
+
+        </ResourceDictionary>
     </Application.Resources>
 </Application>

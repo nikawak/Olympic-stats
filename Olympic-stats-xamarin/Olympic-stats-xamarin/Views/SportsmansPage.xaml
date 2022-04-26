@@ -1,59 +1,58 @@
 ﻿<?xml version="1.0" encoding="utf-8" ?>
 <ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
              xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
-             x:Class="Olympic_stats_xamarin.Views.ItemsPage"
+             x:Class="Olympic_stats_xamarin.Views.SportsmansPage"
              Title="{Binding Title}"
              xmlns:local="clr-namespace:Olympic_stats_xamarin.ViewModels"  
              xmlns:model="clr-namespace:Olympic_stats_xamarin.Models"  
              xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
-             x:Name="BrowseItemsPage"
-             BackgroundColor="{AppThemeBinding Dark=#1E1E1E, Light=white}">
+             x:Name="BrowseSportsmansPage">
 
 
     <ContentPage.BindingContext>
-        <local:ItemsViewModel />
+        <local:SportsmansViewModel />
     </ContentPage.BindingContext>
 
     <ContentPage.ToolbarItems>
-        <ToolbarItem Text="Refresh" Command="{Binding LoadItemsCommand}" />
-        <ToolbarItem Text="Add" Command="{Binding AddItemCommand}" />
+        <ToolbarItem Text="Обновить" Command="{Binding LoadItemsCommand}" />
+        <ToolbarItem Text="Добавить" Command="{Binding AddItemCommand}" />
     </ContentPage.ToolbarItems>
     <!--
       x:DataType enables compiled bindings for better performance and compile time validation of binding expressions.
       https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/data-binding/compiled-bindings
     -->
-    
-    <RefreshView BackgroundColor="gray" x:DataType="local:ItemsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+
+    <RefreshView BackgroundColor="gray" x:DataType="local:SportsmansViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
         <CollectionView x:Name="ItemsListView"
                 ItemsSource="{Binding ListSportsmans}"
                 SelectionMode="Single">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
-                    <StackLayout Padding="10" x:DataType="model:Sportsman">
-                        <Frame BackgroundColor="LightGray" CornerRadius="20" HasShadow="True">
+                    <StackLayout Style="{StaticResource StackLayoutDefault}" Padding="25,10" x:DataType="model:Sportsman">
+                        <Frame BackgroundColor="{AppThemeBinding Dark={StaticResource BgElementsDark}, Light={StaticResource BgElementsLight}}" CornerRadius="5" HasShadow="True">
                             <StackLayout Orientation="Horizontal">
-                                <Frame CornerRadius="15" HasShadow="True">
-                                    <Image Source="{Binding Image}" HeightRequest="{OnPlatform Default=120,Android=66}" WidthRequest="{OnPlatform Default=120,Android=66}"/>
+                                <Frame CornerRadius="5" HasShadow="True">
+                                    <Image Source="{Binding Image}" HeightRequest="{OnPlatform Default=65,UWP=130}" WidthRequest="{OnPlatform Default=65,UWP=130}"/>
                                 </Frame>
                                 <StackLayout VerticalOptions="Center">
 
                                     <StackLayout Orientation="Horizontal">
-                                        <Label TextColor="Black"
+                                        <Label
                                         FontSize="Large"
                                         Text="{Binding Name}"
                                         VerticalOptions="Center" />
-                                        <Label TextColor="Black"
+                                        <Label
                                         FontSize="Large"
                                         Text="{Binding SurName}"
                                         VerticalOptions="Center" />
                                     </StackLayout>
 
                                     <StackLayout Orientation="Horizontal">
-                                        <Label TextColor="Black"
+                                        <Label
                                         FontSize="Small"
                                         Text="{Binding FunctionalClass}"
                                         VerticalOptions="Center" />
-                                        <Label TextColor="Black"
+                                        <Label
                                         FontSize="Small"
                                         Text="{Binding Sex}"
                                         VerticalOptions="Center" />
@@ -64,7 +63,7 @@
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer 
                                 NumberOfTapsRequired="1"
-                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:ItemsViewModel}}, Path=ItemTapped}"		
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:SportsmansViewModel}}, Path=ItemTapped}"		
                                 CommandParameter="{Binding .}">
                             </TapGestureRecognizer>
                         </StackLayout.GestureRecognizers>
@@ -72,7 +71,7 @@
                 </DataTemplate>
             </CollectionView.ItemTemplate>
         </CollectionView>
-    </RefreshView> 
+    </RefreshView>
 
 
 </ContentPage>

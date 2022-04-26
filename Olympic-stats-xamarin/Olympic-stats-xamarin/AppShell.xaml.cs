@@ -11,8 +11,10 @@ namespace Olympic_stats_xamarin
         public AppShell()
         {
             InitializeComponent();
-            Routing.RegisterRoute(nameof(ItemDetailPage), typeof(ItemDetailPage));
-            Routing.RegisterRoute(nameof(NewItemPage), typeof(NewItemPage));
+            Routing.RegisterRoute(nameof(SportsmanEditPage), typeof(SportsmanEditPage));
+            Routing.RegisterRoute(nameof(NewSportsmanPage), typeof(NewSportsmanPage));
+            Routing.RegisterRoute(nameof(RegistrationPage), typeof(RegistrationPage));
+
         }
 
     }

@@ -6,16 +6,8 @@
   </PropertyGroup>
 
   <ItemGroup>
-    <None Remove="Images\cursed_cat.png" />
-    <None Remove="Images\img.png" />
-  </ItemGroup>
-
-  <ItemGroup>
-    <EmbeddedResource Include="Images\cursed_cat.png" />
-    <EmbeddedResource Include="Images\img.png" />
-  </ItemGroup>
-
-  <ItemGroup>
+    <PackageReference Include="sqlite-net-pcl" Version="1.8.116" />
+    <PackageReference Include="System.Data.SqlClient" Version="4.8.3" />
     <PackageReference Include="Xamarin.Forms" Version="5.0.0.2196" />  
     <PackageReference Include="Xamarin.Essentials" Version="1.7.0" />
   </ItemGroup>
@@ -27,8 +19,23 @@
   </ItemGroup>
 
   <ItemGroup>
-    <Compile Update="Views\ItemsPage.xaml.cs">
-      <DependentUpon>ItemsPage.xaml</DependentUpon>
+    <Compile Update="Views\ResultsPage.xaml.cs">
+      <DependentUpon>ResultsPage.xaml</DependentUpon>
     </Compile>
+    <Compile Update="Views\SportsmansPage.xaml.cs">
+      <DependentUpon>SportsmansPage.xaml</DependentUpon>
+    </Compile>
+    <Compile Update="Views\NewSportsmanPage.xaml.cs">
+      <DependentUpon>NewSportsmanPage.xaml</DependentUpon>
+    </Compile>
+  </ItemGroup>
+
+  <ItemGroup>
+    <EmbeddedResource Update="Views\RegistrationPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
+    <EmbeddedResource Update="Views\SettingsPage.xaml">
+      <Generator>MSBuild:UpdateDesignTimeXaml</Generator>
+    </EmbeddedResource>
   </ItemGroup>
 </Project>

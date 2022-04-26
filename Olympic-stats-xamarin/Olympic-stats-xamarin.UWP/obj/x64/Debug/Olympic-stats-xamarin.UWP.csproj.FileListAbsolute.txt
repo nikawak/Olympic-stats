@@ -61,3 +61,15 @@ D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\obj
 D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\obj\x64\Debug\ProjectArchitectures.txt
 D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\obj\x64\Debug\.winmd_cache\$Microsoft.Graphics.Canvas.winmd_636160715180000000.json
 D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\obj\x64\Debug\.winmd_cache\$Microsoft.UI.Xaml.Markup.winmd_637424707200000000.json
+D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\bin\x64\Debug\System.Data.SqlClient.dll
+D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\bin\x64\Debug\System.Diagnostics.DiagnosticSource.dll
+D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\bin\x64\Debug\System.Runtime.CompilerServices.Unsafe.dll
+D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\bin\x64\Debug\System.Text.Encoding.CodePages.dll
+D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\obj\x64\Debug\FxResources.System.Data.SqlClient.SR.resw
+D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\obj\x64\Debug\FxResources.System.Diagnostics.DiagnosticSource.SR.resw
+D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\obj\x64\Debug\FxResources.System.Text.Encoding.CodePages.SR.resw
+D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\bin\x64\Debug\SQLite-net.dll
+D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\bin\x64\Debug\SQLitePCLRaw.batteries_v2.dll
+D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\bin\x64\Debug\SQLitePCLRaw.core.dll
+D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\bin\x64\Debug\e_sqlite3.dll
+D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\bin\x64\Debug\SQLitePCLRaw.provider.e_sqlite3.dll

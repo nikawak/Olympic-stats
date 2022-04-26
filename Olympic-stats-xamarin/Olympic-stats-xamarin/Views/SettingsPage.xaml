@@ -1,0 +1,33 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             xmlns:viewmodels="clr-namespace:Olympic_stats_xamarin.ViewModels"  
+             xmlns:model="clr-namespace:Olympic_stats_xamarin.Models"  
+             x:Class="Olympic_stats_xamarin.Views.SettingsPage"
+             Shell.PresentationMode="ModalAnimated"
+             Title="{Binding Title}"
+             x:DataType="viewmodels:SettingsViewModel">
+
+    <ContentPage.BindingContext>
+        <viewmodels:SettingsViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.Content>
+        <StackLayout Style="{StaticResource StackLayoutDefault}">
+
+            <Label Text="Аккаунт" FontSize="Large" VerticalOptions="Center"/>
+
+            <StackLayout Style="{StaticResource StackLayoutDefault}" Margin="5" Padding="5" Orientation="Vertical">
+                <StackLayout Style="{StaticResource StackLayoutNone}" Orientation="Horizontal">
+                    <Label Text="Тёмная тема"/>
+                    <Switch IsToggled="{Binding IsToggled}"/>
+                </StackLayout>
+
+                <Button Command="{Binding LogoutCommand}" Text="Выйти"/>
+            </StackLayout>
+
+            
+
+        </StackLayout>
+    </ContentPage.Content>
+</ContentPage>
