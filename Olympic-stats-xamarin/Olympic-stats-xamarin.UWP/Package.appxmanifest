@@ -50,6 +50,8 @@
   </Applications>
 
   <Capabilities>
-    <Capability Name="internetClient" />
+    <uap:Capability Name="removableStorage"/>
+    <uap:Capability Name="picturesLibrary"/>
+    <Capability Name="internetClientServer"/>
   </Capabilities>
 </Package>

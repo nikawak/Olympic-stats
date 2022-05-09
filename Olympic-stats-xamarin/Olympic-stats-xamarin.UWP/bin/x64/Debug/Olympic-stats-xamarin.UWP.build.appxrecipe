@@ -61,6 +61,9 @@
     <AppxPackagedFile Include="C:\Users\Никита\.nuget\packages\win2d.uwp\1.20.0\runtimes\win10-x64\native\Microsoft.Graphics.Canvas.dll">
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Никита\.nuget\packages\xamarin.communitytoolkit\2.0.2\lib\netstandard2.0\Xamarin.CommunityToolkit.dll">
+      <PackagePath>Xamarin.CommunityToolkit.dll</PackagePath>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Никита\.nuget\packages\xamarin.essentials\1.7.0\lib\uap10.0.16299\Xamarin.Essentials.dll">
       <PackagePath>Xamarin.Essentials.dll</PackagePath>
     </AppxPackagedFile>
@@ -90,6 +93,9 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\cursed_cat.png">
       <PackagePath>cursed_cat.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\Sportsmans.png">
+      <PackagePath>Sportsmans.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\img.png">
       <PackagePath>img.png</PackagePath>
@@ -201,6 +207,12 @@
     <AppxPackagedFile Include="D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\Assets\Wide310x150Logo.scale-400.png">
       <PackagePath>Assets\Wide310x150Logo.scale-400.png</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\Settings.png">
+      <PackagePath>Settings.png</PackagePath>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\Timer.png">
+      <PackagePath>Timer.png</PackagePath>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\xamarin_logo.png">
       <PackagePath>xamarin_logo.png</PackagePath>

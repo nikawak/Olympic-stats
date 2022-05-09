@@ -17,56 +17,92 @@
         <ToolbarItem Text="Обновить" Command="{Binding LoadItemsCommand}" />
         <ToolbarItem Text="Добавить" Command="{Binding AddItemCommand}" />
     </ContentPage.ToolbarItems>
-    <!--
+    <!-- 
       x:DataType enables compiled bindings for better performance and compile time validation of binding expressions.
       https://docs.microsoft.com/xamarin/xamarin-forms/app-fundamentals/data-binding/compiled-bindings
     -->
 
-    <RefreshView BackgroundColor="gray" x:DataType="local:SportsmansViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+    <RefreshView x:DataType="local:SportsmansViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
         <CollectionView x:Name="ItemsListView"
                 ItemsSource="{Binding ListSportsmans}"
                 SelectionMode="Single">
             <CollectionView.ItemTemplate>
                 <DataTemplate>
                     <StackLayout Style="{StaticResource StackLayoutDefault}" Padding="25,10" x:DataType="model:Sportsman">
-                        <Frame BackgroundColor="{AppThemeBinding Dark={StaticResource BgElementsDark}, Light={StaticResource BgElementsLight}}" CornerRadius="5" HasShadow="True">
-                            <StackLayout Orientation="Horizontal">
-                                <Frame CornerRadius="5" HasShadow="True">
-                                    <Image Source="{Binding Image}" HeightRequest="{OnPlatform Default=65,UWP=130}" WidthRequest="{OnPlatform Default=65,UWP=130}"/>
-                                </Frame>
-                                <StackLayout VerticalOptions="Center">
 
-                                    <StackLayout Orientation="Horizontal">
-                                        <Label
-                                        FontSize="Large"
-                                        Text="{Binding Name}"
-                                        VerticalOptions="Center" />
-                                        <Label
-                                        FontSize="Large"
-                                        Text="{Binding SurName}"
-                                        VerticalOptions="Center" />
-                                    </StackLayout>
-
-                                    <StackLayout Orientation="Horizontal">
-                                        <Label
-                                        FontSize="Small"
-                                        Text="{Binding FunctionalClass}"
-                                        VerticalOptions="Center" />
-                                        <Label
-                                        FontSize="Small"
-                                        Text="{Binding Sex}"
-                                        VerticalOptions="Center" />
-                                    </StackLayout>
-                                </StackLayout>
-                            </StackLayout>
-                        </Frame>
                         <StackLayout.GestureRecognizers>
                             <TapGestureRecognizer 
                                 NumberOfTapsRequired="1"
-                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:SportsmansViewModel}}, Path=ItemTapped}"		
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:SportsmansViewModel}}, Path=ItemTappedCommand}"		
+                                CommandParameter="{Binding .}">
+                            </TapGestureRecognizer>
+                            <TapGestureRecognizer
+                                NumberOfTapsRequired="2"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:SportsmansViewModel}}, Path=ItemTappedCommand2}"		
                                 CommandParameter="{Binding .}">
                             </TapGestureRecognizer>
                         </StackLayout.GestureRecognizers>
+
+                        <Frame CornerRadius="{OnPlatform Default=10, UWP=25}" HasShadow="True">
+                            <SwipeView>
+                                <SwipeView.RightItems>
+                                    <SwipeItem Text="Изменить" CommandParameter="{Binding .}" Command="{Binding Source={RelativeSource AncestorType={x:Type local:SportsmansViewModel}}, Path=ItemTappedCommand2}" BackgroundColor="{AppThemeBinding Dark={StaticResource BgPageDark}, Light={StaticResource BgPageLight}}"/>
+                                    <SwipeItem Text="Удалить" CommandParameter="{Binding .}" Command="{Binding Source={RelativeSource AncestorType={x:Type local:SportsmansViewModel}}, Path=DeleteItemCommand}" BackgroundColor="DarkRed"/>
+                                </SwipeView.RightItems>
+
+                                <StackLayout Style="{StaticResource StackLayoutElement}" Orientation="Horizontal">
+                                    <Frame Padding="1" CornerRadius="10" HasShadow="True">
+                                        <Image Source="{Binding Image}" Aspect="AspectFill" HeightRequest="{OnPlatform Default=90,UWP=150}" WidthRequest="{OnPlatform Default=90,UWP=150}">
+                                            <Image.GestureRecognizers>
+                                                <TapGestureRecognizer NumberOfTapsRequired="1"
+                                                                      Command="{Binding Source={RelativeSource AncestorType={x:Type local:SportsmansViewModel}}, Path=PickPhoto}"		
+                                                                      CommandParameter="{Binding .}"/>
+                                            </Image.GestureRecognizers>
+                                        </Image>
+                                    </Frame>
+
+                                    <StackLayout VerticalOptions="Center">
+
+                                        <StackLayout Padding="20,0,10,0" Orientation="{OnPlatform Default=Vertical, UWP=Horizontal}">
+                                            <Label
+                                        FontSize="{OnPlatform Default=Medium, UWP=Large}"
+                                        Text="{Binding Name}"
+                                        VerticalOptions="Center" />
+                                            <Label
+                                        FontSize="{OnPlatform Default=Medium, UWP=Large}"
+                                        Text="{Binding SurName}"
+                                        VerticalOptions="Center" />
+                                        </StackLayout>
+
+                                        <StackLayout Padding="20,0,10,0" Orientation="Horizontal">
+                                            <Label
+                                        FontSize="{OnPlatform Default=Small, UWP=Medium}"
+                                        Text="{Binding FunctionalClass}"
+                                        VerticalOptions="Center" />
+                                            <Label
+                                        FontSize="{OnPlatform Default=Small, UWP=Medium}"
+                                        Text="{Binding Sex}"
+                                        VerticalOptions="Center" />
+                                        </StackLayout>
+                                    </StackLayout>
+                                </StackLayout>
+
+                                <SwipeView.GestureRecognizers>
+                                    <TapGestureRecognizer 
+                                NumberOfTapsRequired="1"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:SportsmansViewModel}}, Path=ItemTappedCommand}"		
+                                CommandParameter="{Binding .}">
+                                    </TapGestureRecognizer>
+                                    <TapGestureRecognizer
+                                NumberOfTapsRequired="2"
+                                Command="{Binding Source={RelativeSource AncestorType={x:Type local:SportsmansViewModel}}, Path=ItemTappedCommand2}"		
+                                CommandParameter="{Binding .}">
+                                    </TapGestureRecognizer>
+
+                                </SwipeView.GestureRecognizers>
+                            </SwipeView>
+                        </Frame>
+
                     </StackLayout>
                 </DataTemplate>
             </CollectionView.ItemTemplate>

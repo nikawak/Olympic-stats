@@ -18,7 +18,7 @@
             <Label Text="Аккаунт" FontSize="Large" VerticalOptions="Center"/>
 
             <StackLayout Style="{StaticResource StackLayoutDefault}" Margin="5" Padding="5" Orientation="Vertical">
-                <StackLayout Style="{StaticResource StackLayoutNone}" Orientation="Horizontal">
+                <StackLayout  Orientation="Horizontal">
                     <Label Text="Тёмная тема"/>
                     <Switch IsToggled="{Binding IsToggled}"/>
                 </StackLayout>

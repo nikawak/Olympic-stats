@@ -15,7 +15,6 @@ namespace Olympic_stats_xamarin.Views
         public LoginPage()
         {
             InitializeComponent();
-            this.BindingContext = new LoginViewModel();
         }
     }
 }

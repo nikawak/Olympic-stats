@@ -1,13 +1,13 @@
-﻿using Olympic_stats_xamarin.Models;
+﻿using Olympic_stats_xamarin.Helpers;
+using Olympic_stats_xamarin.Models;
 using System;
 using System.Diagnostics;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace Olympic_stats_xamarin.ViewModels
 {
     [QueryProperty(nameof(ItemId), nameof(ItemId))]
-    public class ItemDetailViewModel : BaseViewModel
+    public class SportsmanEditViewModel : BaseViewModel
     {
         private int id;
         private string name;
@@ -18,18 +18,15 @@ namespace Olympic_stats_xamarin.ViewModels
 
         private Sportsman Sportsman;
 
-        public ItemDetailViewModel()
+        public SportsmanEditViewModel()
         {
-            Title = "Change parametrs";
+            Title = "Изменить параметры спортсмена";
             SaveCommand = new Command(OnSave, OnValidate);
             CancelCommand = new Command(OnBack);
-            DeleteCommand = new Command(OnDelete);
         }
 
         public Command CancelCommand { get; }
         public Command SaveCommand { get; }
-        public Command DeleteCommand { get; }
-
 
 
         public string Name
@@ -77,15 +74,13 @@ namespace Olympic_stats_xamarin.ViewModels
         {
             try
             {
-                var Item = await DataStore.GetItemAsync(ItemId);
+                var Item = await LocalDB.Get<Sportsman>(ItemId);
                 id = Item.Id;
                 Name = Item.Name;
                 SurName = Item.SurName;
                 FunctionalClass = Item.FunctionalClass;
                 Sex = Item.Sex;
                 Image = Item.Image;
-
-
             }
             catch (Exception)
             {
@@ -101,12 +96,7 @@ namespace Olympic_stats_xamarin.ViewModels
             Sportsman = new Sportsman()
             { Id = id, Name = name, SurName = surName, FunctionalClass = functionalClass, Sex = sex, Image = image };
 
-            await DataStore.UpdateItemAsync(Sportsman);
-            await Shell.Current.GoToAsync("..");
-        }
-        public async void OnDelete()
-        {
-            await DataStore.DeleteItemAsync(id);
+            await LocalDB.Update(Sportsman);
             await Shell.Current.GoToAsync("..");
         }
         public bool OnValidate()

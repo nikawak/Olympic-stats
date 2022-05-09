@@ -14,19 +14,9 @@ namespace Olympic_stats_xamarin.Views
 {
     public partial class SportsmansPage : ContentPage
     {
-        SportsmansViewModel _viewModel;
-
         public SportsmansPage()
         {
             InitializeComponent();
-
-            BindingContext = _viewModel = new SportsmansViewModel();
-        }
-
-        protected override void OnAppearing()
-        {
-            base.OnAppearing();
-            //_viewModel.OnAppearing();
         }
     }
 }

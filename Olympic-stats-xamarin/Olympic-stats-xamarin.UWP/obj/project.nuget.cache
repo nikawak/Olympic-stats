@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "Irfu5Ja72fs0bcGUQPwcltWm1fleQKKppI+RNleDnfAFQsKtlbbwSiix0Nw71MRQdY133WkEirb4NeJ8kYpWDQ==",
+  "dgSpecHash": "UMYBacwY8ln2Dxu0xBDeKNpJ6tyPF3rc3MweMG+xRUbJ9vpKyKksneE4mNH69y+euqWyPz+LCH8gY8yMTHialg==",
   "success": true,
   "projectFilePath": "D:\\Programming\\Olympic-stats\\Olympic-stats-xamarin\\Olympic-stats-xamarin.UWP\\Olympic-stats-xamarin.UWP.csproj",
   "expectedPackageFiles": [
@@ -36,11 +36,50 @@
     "C:\\Users\\Никита\\.nuget\\packages\\system.data.sqlclient\\4.8.3\\system.data.sqlclient.4.8.3.nupkg.sha512",
     "C:\\Users\\Никита\\.nuget\\packages\\system.diagnostics.diagnosticsource\\4.7.0\\system.diagnostics.diagnosticsource.4.7.0.nupkg.sha512",
     "C:\\Users\\Никита\\.nuget\\packages\\system.memory\\4.5.4\\system.memory.4.5.4.nupkg.sha512",
+    "C:\\Users\\Никита\\.nuget\\packages\\system.reflection.emit.ilgeneration\\4.7.0\\system.reflection.emit.ilgeneration.4.7.0.nupkg.sha512",
+    "C:\\Users\\Никита\\.nuget\\packages\\system.reflection.emit.lightweight\\4.7.0\\system.reflection.emit.lightweight.4.7.0.nupkg.sha512",
     "C:\\Users\\Никита\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.7.0\\system.runtime.compilerservices.unsafe.4.7.0.nupkg.sha512",
     "C:\\Users\\Никита\\.nuget\\packages\\system.text.encoding.codepages\\4.7.0\\system.text.encoding.codepages.4.7.0.nupkg.sha512",
+    "C:\\Users\\Никита\\.nuget\\packages\\system.threading.tasks.extensions\\4.5.4\\system.threading.tasks.extensions.4.5.4.nupkg.sha512",
     "C:\\Users\\Никита\\.nuget\\packages\\win2d.uwp\\1.20.0\\win2d.uwp.1.20.0.nupkg.sha512",
+    "C:\\Users\\Никита\\.nuget\\packages\\xamarin.communitytoolkit\\2.0.2\\xamarin.communitytoolkit.2.0.2.nupkg.sha512",
     "C:\\Users\\Никита\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
     "C:\\Users\\Никита\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Обнаружено понижение версии пакета Xamarin.Essentials с 1.7.3 на 1.7.0. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n Olympic-stats-xamarin.UWP -> Olympic-stats-xamarin -> Xamarin.Essentials (>= 1.7.3) \r\n Olympic-stats-xamarin.UWP -> Xamarin.Essentials (>= 1.7.0)",
+      "libraryId": "Xamarin.Essentials",
+      "targetGraphs": [
+        "UAP,Version=v10.0.16299",
+        "UAP,Version=v10.0.16299/win10-arm",
+        "UAP,Version=v10.0.16299/win10-arm-aot",
+        "UAP,Version=v10.0.16299/win10-arm64-aot",
+        "UAP,Version=v10.0.16299/win10-x64",
+        "UAP,Version=v10.0.16299/win10-x64-aot",
+        "UAP,Version=v10.0.16299/win10-x86",
+        "UAP,Version=v10.0.16299/win10-x86-aot"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Обнаружено понижение версии пакета Xamarin.Forms с 5.0.0.2401 на 5.0.0.2196. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n Olympic-stats-xamarin.UWP -> Olympic-stats-xamarin -> Xamarin.Forms (>= 5.0.0.2401) \r\n Olympic-stats-xamarin.UWP -> Xamarin.Forms (>= 5.0.0.2196)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "UAP,Version=v10.0.16299",
+        "UAP,Version=v10.0.16299/win10-arm",
+        "UAP,Version=v10.0.16299/win10-arm-aot",
+        "UAP,Version=v10.0.16299/win10-arm64-aot",
+        "UAP,Version=v10.0.16299/win10-x64",
+        "UAP,Version=v10.0.16299/win10-x64-aot",
+        "UAP,Version=v10.0.16299/win10-x86",
+        "UAP,Version=v10.0.16299/win10-x86-aot"
+      ]
+    }
+  ]
 }

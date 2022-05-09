@@ -14,7 +14,7 @@ namespace Olympic_stats_xamarin
             Routing.RegisterRoute(nameof(SportsmanEditPage), typeof(SportsmanEditPage));
             Routing.RegisterRoute(nameof(NewSportsmanPage), typeof(NewSportsmanPage));
             Routing.RegisterRoute(nameof(RegistrationPage), typeof(RegistrationPage));
-
+            Routing.RegisterRoute(nameof(SportsmanResultsPage), typeof(SportsmanResultsPage));
         }
 
     }

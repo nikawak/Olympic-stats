@@ -13,31 +13,36 @@
         <viewmodels:RegistrationViewModel/>
     </ContentPage.BindingContext>
 
-    <ContentPage.Resources>
-        <Style TargetType="Page">
-            <Setter Property="BackgroundColor" 
-                        Value="{AppThemeBinding 
-                        Dark={StaticResource BgPageDark}, 
-                        Light={StaticResource BgPageLight}}"/>
-        </Style>
-    </ContentPage.Resources>
-
     <ContentPage.Content>
         <StackLayout Style="{StaticResource StackLayoutDefault}">
             <Label Text="Чтобы начать пользоваться приложением, вам надо создать создать аккаунт"/>
-            
-            <Label/>
-            <Entry Margin="70,5"/>
-            <Label/>
-            <Entry Margin="70,5"/>
-            <Label/>
-            <Entry Margin="70,5"/>
-            <Label/>
-            <Entry Margin="70,5"/>
-            <Label/>
-            <!--<model:SliderLabel Maximum="99" Minimum="18" Margin="70,5"/>-->
+
+            <Entry Placeholder="Полное имя" Margin="50,5"/>
+            <Entry Placeholder="Пароль" IsPassword="True" Margin="50,5"/>
+            <Entry Placeholder="Повторите пароль" Margin="50,5"/>
+            <StackLayout Orientation="Horizontal">
+                <CheckBox x:Name="cb18" Margin="50,5"/>
+                <Label Text="Мне есть 18 лет"/>
+            </StackLayout>
+
+            <Button Text="Регистрация" Command="{Binding}" IsEnabled="False">
+                <Button.Style>
+                    <Style TargetType="Button">
+                        <Style.Triggers>
+                            <DataTrigger TargetType="Button" Binding="{Binding Source={x:Reference cb18}, Path=IsChecked}" Value="True">
+                                <Setter Property="IsEnabled" Value="True"></Setter>
+                            </DataTrigger>
+                        </Style.Triggers>
+                    </Style>
+                </Button.Style>
+            </Button>
+
             <Label FontSize="Medium" Text="Есть аккаунт?"/>
-            <Button FontSize="Medium" Text="Авторизироваться" Command="{Binding LoginCommand}"/>
+            <Label FontSize="Medium" Text="Авторизироваться">
+                <Label.GestureRecognizers>
+                    <TapGestureRecognizer Command="{Binding LoginCommand}"/>
+                </Label.GestureRecognizers>
+            </Label>
         </StackLayout>
     </ContentPage.Content>
 </ContentPage>

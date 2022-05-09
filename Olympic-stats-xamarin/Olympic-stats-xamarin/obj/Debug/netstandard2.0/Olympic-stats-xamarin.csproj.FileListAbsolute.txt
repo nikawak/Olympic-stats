@@ -22,3 +22,4 @@ D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Deb
 D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Debug\netstandard2.0\Views\RegistrationPage.xaml.g.cs
 D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Debug\netstandard2.0\Views\SettingsPage.xaml.g.cs
 D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Debug\netstandard2.0\Views\ResultsPage.xaml.g.cs
+D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\obj\Debug\netstandard2.0\Views\SportsmanResultsPage.xaml.g.cs

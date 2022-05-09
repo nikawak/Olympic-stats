@@ -1,0 +1,47 @@
+﻿<?xml version="1.0" encoding="utf-8" ?>
+<ContentPage xmlns="http://xamarin.com/schemas/2014/forms"
+             xmlns:x="http://schemas.microsoft.com/winfx/2009/xaml"
+             x:Class="Olympic_stats_xamarin.Views.SportsmanResultsPage"
+             xmlns:vm="clr-namespace:Olympic_stats_xamarin.ViewModels"
+             xmlns:model="clr-namespace:Olympic_stats_xamarin.Models"
+             Title="{Binding Title}">
+    <ContentPage.BindingContext>
+        <vm:SportsmanResultsViewModel/>
+    </ContentPage.BindingContext>
+
+    <ContentPage.ToolbarItems>
+        <ToolbarItem Text="Обновить" Command="{Binding LoadItemsCommand}" />
+    </ContentPage.ToolbarItems>
+
+        <StackLayout Style="{StaticResource StackLayoutDefault}">
+            <RefreshView x:DataType="vm:SportsmanResultsViewModel" Command="{Binding LoadItemsCommand}" IsRefreshing="{Binding IsBusy, Mode=TwoWay}">
+                <CollectionView ItemsSource="{Binding Results}">
+                    <CollectionView.ItemTemplate>
+                        <DataTemplate x:DataType="model:SportResult">
+                        <StackLayout>
+                            <Frame Margin="30,10" CornerRadius="10" HasShadow="True">
+                                <SwipeView>
+                                    <SwipeView.RightItems>
+                                        <SwipeItem Text="Удалить" CommandParameter="{Binding .}" Command="{Binding Source={RelativeSource AncestorType={x:Type vm:SportsmanResultsViewModel}}, Path=DeleteItemCommand}" BackgroundColor="DarkRed"/>
+                                    </SwipeView.RightItems>
+                                    <StackLayout Orientation="Vertical" Style="{StaticResource StackLayoutElement}">
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                            <Label Text="{Binding Discipline}"/>
+                                            <Label Text="{Binding DateTime}"/>
+                                        </StackLayout>
+                                        <StackLayout Orientation="Horizontal" HorizontalOptions="Center">
+                                            <Label Text="Результат: "/>
+                                            <Label IsVisible="{Binding IsTime}" Text="{Binding TimeSpan}"/>
+                                            <Label IsVisible="{Binding IsTime, Converter={StaticResource inverter}}" Text="{Binding Range}"></Label>
+                                        </StackLayout>
+                                    </StackLayout>
+                                </SwipeView>
+                            </Frame>
+                        </StackLayout>
+                        </DataTemplate>
+                    </CollectionView.ItemTemplate>
+                </CollectionView>
+            </RefreshView>
+        </StackLayout>
+
+</ContentPage>

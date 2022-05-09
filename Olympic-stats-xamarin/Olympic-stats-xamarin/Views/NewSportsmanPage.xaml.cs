@@ -14,7 +14,6 @@ namespace Olympic_stats_xamarin.Views
         public NewSportsmanPage()
         {
             InitializeComponent();
-            //BindingContext = new NewSportsmanViewModel();
         }
     }
 }

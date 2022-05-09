@@ -4,10 +4,10 @@
              xmlns:viewmodels="clr-namespace:Olympic_stats_xamarin.ViewModels"
              x:Class="Olympic_stats_xamarin.Views.SportsmanEditPage"
              Title="{Binding Title}"
-             x:DataType="viewmodels:ItemDetailViewModel">
+             x:DataType="viewmodels:SportsmanEditViewModel">
 
     <ContentPage.BindingContext>
-        <viewmodels:ItemDetailViewModel/>
+        <viewmodels:SportsmanEditViewModel/>
     </ContentPage.BindingContext>
 
     <StackLayout Style="{StaticResource StackLayoutDefault}" Spacing="3" Padding="15">
@@ -37,6 +37,5 @@
 
         <Button Text="Отмена" Command="{Binding CancelCommand}"/>
         <Button Text="Сохранить" Command="{Binding SaveCommand}"/>
-        <Button BackgroundColor="DarkRed" Text="Удалить" Command="{Binding DeleteCommand}"/>
     </StackLayout>
 </ContentPage>

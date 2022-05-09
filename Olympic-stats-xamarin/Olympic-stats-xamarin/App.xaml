@@ -13,10 +13,10 @@
 
 
             <!-- Colors-->
-            <Color x:Key="Primary">#2196F3</Color>
+            <Color x:Key="Primary">#3366FF</Color>
 
-            <Color x:Key="BgPageDark">#1F1F1F</Color>
-            <Color x:Key="BgElementsDark">#2E2E2E</Color>
+            <Color x:Key="BgPageDark">#131623</Color>
+            <Color x:Key="BgElementsDark">#172030</Color>
             <Color x:Key="TextDark">#FFF</Color>
             <Color x:Key="BorderDark">#FFF</Color>
 
@@ -24,10 +24,10 @@
             <Color x:Key="BgElementsLight">#FFF</Color>
             <Color x:Key="TextLight">#000</Color>
             <Color x:Key="BorderLight">#B4B4B4</Color>
-
+            <!--#3366FF-->
             <Color x:Key="BgDinamic">#1F1F1F</Color>
 
-
+            <helpers:InverseBoolConverter x:Key="inverter"/>
             <!-- Styles for themes-->
             <Style TargetType="Label">
                 <Setter Property="TextColor" 
@@ -56,15 +56,38 @@
                         Dark={StaticResource BgPageDark}, 
                         Light={StaticResource BgPageLight}}"/>
             </Style>
-            <Style TargetType="StackLayout" x:Key="StackLayoutNone">
-            </Style>
-
-            <Style TargetType="Entry">
-
+            <Style TargetType="StackLayout" x:Key="StackLayoutElement">
                 <Setter Property="BackgroundColor" 
                         Value="{AppThemeBinding 
                         Dark={StaticResource BgElementsDark}, 
                         Light={StaticResource BgElementsLight}}"/>
+            </Style>
+            <Style TargetType="StackLayout" x:Key="StackLayoutNone">
+            </Style>
+
+            <Style TargetType="CollectionView">
+                <Setter Property="BackgroundColor" 
+                        Value="{AppThemeBinding 
+                        Dark={StaticResource BgPageDark}, 
+                        Light={StaticResource BgPageLight}}"/>
+            </Style>
+            <Style TargetType="Frame">
+                <Setter Property="BackgroundColor" 
+                        Value="{AppThemeBinding 
+                        Dark={StaticResource BgElementsDark}, 
+                        Light={StaticResource BgElementsLight}}"/>
+                <Setter Property="BorderColor"
+                        Value="{AppThemeBinding
+                        Dark={StaticResource BorderDark},
+                        Light={StaticResource BorderLight}}"/>
+            </Style>
+
+
+            <Style TargetType="Entry">
+                <Setter Property="BackgroundColor" 
+                        Value="{AppThemeBinding
+                        Light={StaticResource BgElementsLight},
+                        Dark={StaticResource BgElementsDark}}"/>
                 <Setter Property="PlaceholderColor" 
                         Value="{AppThemeBinding 
                         Dark={StaticResource BorderDark}, 
@@ -78,30 +101,21 @@
                         <Setter Property="PlaceholderColor" Value="{StaticResource Primary}"/>
                         <Setter Property="BackgroundColor"
                                 Value="{AppThemeBinding 
-                                Dark={StaticResource BgElementsDark}, 
-                                Light={StaticResource BgElementsLight}}"/>
+                                Dark={StaticResource BgPageDark}, 
+                                Light={StaticResource BgPageLight}}"/>
                     </Trigger>
 
                     <Trigger TargetType="Entry" Property="IsFocused" Value="False">
-                        <Setter Property="PlaceholderColor"
-                                Value="{AppThemeBinding 
-                                Dark={StaticResource BorderDark}, 
-                                Light={StaticResource BorderLight}}"/>
                         <Setter Property="BackgroundColor"
                                 Value="{AppThemeBinding 
-                                Dark={StaticResource BgPageDark}, 
-                                Light={StaticResource BgPageLight}}"/>
+                                Dark={StaticResource BgElementsDark}, 
+                                Light={StaticResource BgElementsLight}}"/>
                     </Trigger>
 
                 </Style.Triggers>
             </Style>
 
-            <Style TargetType="CollectionView">
-                <Setter Property="BackgroundColor" 
-                        Value="{AppThemeBinding 
-                        Dark={StaticResource BgElementsDark}, 
-                        Light={StaticResource BgElementsLight}}"/>
-            </Style>
+            
 
             <Style TargetType="Picker">
                 <Setter Property="TextColor" 

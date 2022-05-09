@@ -22,7 +22,7 @@
     <PackageDependency Name="Microsoft.VCLibs.140.00.Debug" MinVersion="14.0.30704.0" Publisher="CN=Microsoft Corporation, O=Microsoft Corporation, L=Redmond, S=Washington, C=US" />
   </Dependencies>
   <Resources>
-    <Resource Language="EN-US" />
+    <Resource Language="RU-RU" />
   </Resources>
   <Applications>
     <Application Id="App" Executable="Olympic-stats-xamarin.UWP.exe" EntryPoint="Olympic_stats_xamarin.UWP.App">
@@ -39,7 +39,9 @@
     </Application>
   </Applications>
   <Capabilities>
-    <Capability Name="internetClient" />
+    <uap:Capability Name="removableStorage" />
+    <uap:Capability Name="picturesLibrary" />
+    <Capability Name="internetClientServer" />
   </Capabilities>
   <Extensions>
     <Extension Category="windows.activatableClass.inProcessServer">

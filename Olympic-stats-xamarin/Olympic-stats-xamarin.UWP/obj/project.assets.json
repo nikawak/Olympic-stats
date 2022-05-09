@@ -497,6 +497,39 @@
           "lib/netstandard2.0/System.Memory.dll": {}
         }
       },
+      "System.Reflection.Emit.ILGeneration/4.7.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Reflection.Emit.ILGeneration.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Reflection.Emit.ILGeneration.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/aot/lib/netcore50/System.Reflection.Emit.ILGeneration.dll": {
+            "assetType": "runtime",
+            "rid": "aot"
+          }
+        }
+      },
+      "System.Reflection.Emit.Lightweight/4.7.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Reflection.Emit.ILGeneration": "4.7.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Reflection.Emit.Lightweight.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Reflection.Emit.Lightweight.dll": {}
+        },
+        "runtimeTargets": {
+          "runtimes/aot/lib/netcore50/System.Reflection.Emit.Lightweight.dll": {
+            "assetType": "runtime",
+            "rid": "aot"
+          }
+        }
+      },
       "System.Runtime.CompilerServices.Unsafe/4.7.0": {
         "type": "package",
         "compile": {
@@ -524,6 +557,18 @@
           }
         }
       },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
+        }
+      },
       "Win2D.uwp/1.20.0": {
         "type": "package",
         "compile": {
@@ -545,6 +590,20 @@
             "assetType": "native",
             "rid": "win10-x86"
           }
+        }
+      },
+      "Xamarin.CommunityToolkit/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Reflection.Emit.Lightweight": "4.7.0",
+          "System.Threading.Tasks.Extensions": "4.5.4",
+          "Xamarin.Forms": "5.0.0.2291"
+        },
+        "compile": {
+          "lib/netstandard2.0/Xamarin.CommunityToolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.CommunityToolkit.dll": {}
         }
       },
       "Xamarin.Essentials/1.7.0": {
@@ -584,8 +643,9 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "System.Data.SqlClient": "4.8.3",
-          "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.CommunityToolkit": "2.0.2",
+          "Xamarin.Essentials": "1.7.3",
+          "Xamarin.Forms": "5.0.0.2401",
           "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
@@ -1194,6 +1254,27 @@
           "lib/netstandard2.0/System.Memory.dll": {}
         }
       },
+      "System.Reflection.Emit.ILGeneration/4.7.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Reflection.Emit.ILGeneration.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Reflection.Emit.ILGeneration.dll": {}
+        }
+      },
+      "System.Reflection.Emit.Lightweight/4.7.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Reflection.Emit.ILGeneration": "4.7.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Reflection.Emit.Lightweight.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Reflection.Emit.Lightweight.dll": {}
+        }
+      },
       "System.Runtime.CompilerServices.Unsafe/4.7.0": {
         "type": "package",
         "compile": {
@@ -1215,6 +1296,18 @@
           "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
         }
       },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
+        }
+      },
       "Win2D.uwp/1.20.0": {
         "type": "package",
         "compile": {
@@ -1225,6 +1318,20 @@
         },
         "native": {
           "runtimes/win10-arm/native/Microsoft.Graphics.Canvas.dll": {}
+        }
+      },
+      "Xamarin.CommunityToolkit/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Reflection.Emit.Lightweight": "4.7.0",
+          "System.Threading.Tasks.Extensions": "4.5.4",
+          "Xamarin.Forms": "5.0.0.2291"
+        },
+        "compile": {
+          "lib/netstandard2.0/Xamarin.CommunityToolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.CommunityToolkit.dll": {}
         }
       },
       "Xamarin.Essentials/1.7.0": {
@@ -1264,8 +1371,9 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "System.Data.SqlClient": "4.8.3",
-          "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.CommunityToolkit": "2.0.2",
+          "Xamarin.Essentials": "1.7.3",
+          "Xamarin.Forms": "5.0.0.2401",
           "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
@@ -1875,6 +1983,27 @@
           "lib/netstandard2.0/System.Memory.dll": {}
         }
       },
+      "System.Reflection.Emit.ILGeneration/4.7.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Reflection.Emit.ILGeneration.dll": {}
+        },
+        "runtime": {
+          "runtimes/aot/lib/netcore50/System.Reflection.Emit.ILGeneration.dll": {}
+        }
+      },
+      "System.Reflection.Emit.Lightweight/4.7.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Reflection.Emit.ILGeneration": "4.7.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Reflection.Emit.Lightweight.dll": {}
+        },
+        "runtime": {
+          "runtimes/aot/lib/netcore50/System.Reflection.Emit.Lightweight.dll": {}
+        }
+      },
       "System.Runtime.CompilerServices.Unsafe/4.7.0": {
         "type": "package",
         "compile": {
@@ -1896,6 +2025,18 @@
           "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
         }
       },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
+        }
+      },
       "Win2D.uwp/1.20.0": {
         "type": "package",
         "compile": {
@@ -1906,6 +2047,20 @@
         },
         "native": {
           "runtimes/win10-arm/native/Microsoft.Graphics.Canvas.dll": {}
+        }
+      },
+      "Xamarin.CommunityToolkit/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Reflection.Emit.Lightweight": "4.7.0",
+          "System.Threading.Tasks.Extensions": "4.5.4",
+          "Xamarin.Forms": "5.0.0.2291"
+        },
+        "compile": {
+          "lib/netstandard2.0/Xamarin.CommunityToolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.CommunityToolkit.dll": {}
         }
       },
       "Xamarin.Essentials/1.7.0": {
@@ -1945,8 +2100,9 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "System.Data.SqlClient": "4.8.3",
-          "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.CommunityToolkit": "2.0.2",
+          "Xamarin.Essentials": "1.7.3",
+          "Xamarin.Forms": "5.0.0.2401",
           "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
@@ -2556,6 +2712,27 @@
           "lib/netstandard2.0/System.Memory.dll": {}
         }
       },
+      "System.Reflection.Emit.ILGeneration/4.7.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Reflection.Emit.ILGeneration.dll": {}
+        },
+        "runtime": {
+          "runtimes/aot/lib/netcore50/System.Reflection.Emit.ILGeneration.dll": {}
+        }
+      },
+      "System.Reflection.Emit.Lightweight/4.7.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Reflection.Emit.ILGeneration": "4.7.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Reflection.Emit.Lightweight.dll": {}
+        },
+        "runtime": {
+          "runtimes/aot/lib/netcore50/System.Reflection.Emit.Lightweight.dll": {}
+        }
+      },
       "System.Runtime.CompilerServices.Unsafe/4.7.0": {
         "type": "package",
         "compile": {
@@ -2577,6 +2754,18 @@
           "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
         }
       },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
+        }
+      },
       "Win2D.uwp/1.20.0": {
         "type": "package",
         "compile": {
@@ -2584,6 +2773,20 @@
         },
         "runtime": {
           "lib/uap10.0/Microsoft.Graphics.Canvas.winmd": {}
+        }
+      },
+      "Xamarin.CommunityToolkit/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Reflection.Emit.Lightweight": "4.7.0",
+          "System.Threading.Tasks.Extensions": "4.5.4",
+          "Xamarin.Forms": "5.0.0.2291"
+        },
+        "compile": {
+          "lib/netstandard2.0/Xamarin.CommunityToolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.CommunityToolkit.dll": {}
         }
       },
       "Xamarin.Essentials/1.7.0": {
@@ -2623,8 +2826,9 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "System.Data.SqlClient": "4.8.3",
-          "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.CommunityToolkit": "2.0.2",
+          "Xamarin.Essentials": "1.7.3",
+          "Xamarin.Forms": "5.0.0.2401",
           "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
@@ -3233,6 +3437,27 @@
           "lib/netstandard2.0/System.Memory.dll": {}
         }
       },
+      "System.Reflection.Emit.ILGeneration/4.7.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Reflection.Emit.ILGeneration.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Reflection.Emit.ILGeneration.dll": {}
+        }
+      },
+      "System.Reflection.Emit.Lightweight/4.7.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Reflection.Emit.ILGeneration": "4.7.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Reflection.Emit.Lightweight.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Reflection.Emit.Lightweight.dll": {}
+        }
+      },
       "System.Runtime.CompilerServices.Unsafe/4.7.0": {
         "type": "package",
         "compile": {
@@ -3254,6 +3479,18 @@
           "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
         }
       },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
+        }
+      },
       "Win2D.uwp/1.20.0": {
         "type": "package",
         "compile": {
@@ -3264,6 +3501,20 @@
         },
         "native": {
           "runtimes/win10-x64/native/Microsoft.Graphics.Canvas.dll": {}
+        }
+      },
+      "Xamarin.CommunityToolkit/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Reflection.Emit.Lightweight": "4.7.0",
+          "System.Threading.Tasks.Extensions": "4.5.4",
+          "Xamarin.Forms": "5.0.0.2291"
+        },
+        "compile": {
+          "lib/netstandard2.0/Xamarin.CommunityToolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.CommunityToolkit.dll": {}
         }
       },
       "Xamarin.Essentials/1.7.0": {
@@ -3303,8 +3554,9 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "System.Data.SqlClient": "4.8.3",
-          "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.CommunityToolkit": "2.0.2",
+          "Xamarin.Essentials": "1.7.3",
+          "Xamarin.Forms": "5.0.0.2401",
           "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
@@ -3914,6 +4166,27 @@
           "lib/netstandard2.0/System.Memory.dll": {}
         }
       },
+      "System.Reflection.Emit.ILGeneration/4.7.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Reflection.Emit.ILGeneration.dll": {}
+        },
+        "runtime": {
+          "runtimes/aot/lib/netcore50/System.Reflection.Emit.ILGeneration.dll": {}
+        }
+      },
+      "System.Reflection.Emit.Lightweight/4.7.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Reflection.Emit.ILGeneration": "4.7.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Reflection.Emit.Lightweight.dll": {}
+        },
+        "runtime": {
+          "runtimes/aot/lib/netcore50/System.Reflection.Emit.Lightweight.dll": {}
+        }
+      },
       "System.Runtime.CompilerServices.Unsafe/4.7.0": {
         "type": "package",
         "compile": {
@@ -3935,6 +4208,18 @@
           "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
         }
       },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
+        }
+      },
       "Win2D.uwp/1.20.0": {
         "type": "package",
         "compile": {
@@ -3945,6 +4230,20 @@
         },
         "native": {
           "runtimes/win10-x64/native/Microsoft.Graphics.Canvas.dll": {}
+        }
+      },
+      "Xamarin.CommunityToolkit/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Reflection.Emit.Lightweight": "4.7.0",
+          "System.Threading.Tasks.Extensions": "4.5.4",
+          "Xamarin.Forms": "5.0.0.2291"
+        },
+        "compile": {
+          "lib/netstandard2.0/Xamarin.CommunityToolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.CommunityToolkit.dll": {}
         }
       },
       "Xamarin.Essentials/1.7.0": {
@@ -3984,8 +4283,9 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "System.Data.SqlClient": "4.8.3",
-          "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.CommunityToolkit": "2.0.2",
+          "Xamarin.Essentials": "1.7.3",
+          "Xamarin.Forms": "5.0.0.2401",
           "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
@@ -4594,6 +4894,27 @@
           "lib/netstandard2.0/System.Memory.dll": {}
         }
       },
+      "System.Reflection.Emit.ILGeneration/4.7.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Reflection.Emit.ILGeneration.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Reflection.Emit.ILGeneration.dll": {}
+        }
+      },
+      "System.Reflection.Emit.Lightweight/4.7.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Reflection.Emit.ILGeneration": "4.7.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Reflection.Emit.Lightweight.dll": {}
+        },
+        "runtime": {
+          "lib/netcore50/System.Reflection.Emit.Lightweight.dll": {}
+        }
+      },
       "System.Runtime.CompilerServices.Unsafe/4.7.0": {
         "type": "package",
         "compile": {
@@ -4615,6 +4936,18 @@
           "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
         }
       },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
+        }
+      },
       "Win2D.uwp/1.20.0": {
         "type": "package",
         "compile": {
@@ -4625,6 +4958,20 @@
         },
         "native": {
           "runtimes/win10-x86/native/Microsoft.Graphics.Canvas.dll": {}
+        }
+      },
+      "Xamarin.CommunityToolkit/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Reflection.Emit.Lightweight": "4.7.0",
+          "System.Threading.Tasks.Extensions": "4.5.4",
+          "Xamarin.Forms": "5.0.0.2291"
+        },
+        "compile": {
+          "lib/netstandard2.0/Xamarin.CommunityToolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.CommunityToolkit.dll": {}
         }
       },
       "Xamarin.Essentials/1.7.0": {
@@ -4664,8 +5011,9 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "System.Data.SqlClient": "4.8.3",
-          "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.CommunityToolkit": "2.0.2",
+          "Xamarin.Essentials": "1.7.3",
+          "Xamarin.Forms": "5.0.0.2401",
           "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
@@ -5275,6 +5623,27 @@
           "lib/netstandard2.0/System.Memory.dll": {}
         }
       },
+      "System.Reflection.Emit.ILGeneration/4.7.0": {
+        "type": "package",
+        "compile": {
+          "ref/netstandard2.0/System.Reflection.Emit.ILGeneration.dll": {}
+        },
+        "runtime": {
+          "runtimes/aot/lib/netcore50/System.Reflection.Emit.ILGeneration.dll": {}
+        }
+      },
+      "System.Reflection.Emit.Lightweight/4.7.0": {
+        "type": "package",
+        "dependencies": {
+          "System.Reflection.Emit.ILGeneration": "4.7.0"
+        },
+        "compile": {
+          "ref/netstandard2.0/System.Reflection.Emit.Lightweight.dll": {}
+        },
+        "runtime": {
+          "runtimes/aot/lib/netcore50/System.Reflection.Emit.Lightweight.dll": {}
+        }
+      },
       "System.Runtime.CompilerServices.Unsafe/4.7.0": {
         "type": "package",
         "compile": {
@@ -5296,6 +5665,18 @@
           "runtimes/win/lib/netstandard2.0/System.Text.Encoding.CodePages.dll": {}
         }
       },
+      "System.Threading.Tasks.Extensions/4.5.4": {
+        "type": "package",
+        "dependencies": {
+          "System.Runtime.CompilerServices.Unsafe": "4.5.3"
+        },
+        "compile": {
+          "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll": {}
+        }
+      },
       "Win2D.uwp/1.20.0": {
         "type": "package",
         "compile": {
@@ -5306,6 +5687,20 @@
         },
         "native": {
           "runtimes/win10-x86/native/Microsoft.Graphics.Canvas.dll": {}
+        }
+      },
+      "Xamarin.CommunityToolkit/2.0.2": {
+        "type": "package",
+        "dependencies": {
+          "System.Reflection.Emit.Lightweight": "4.7.0",
+          "System.Threading.Tasks.Extensions": "4.5.4",
+          "Xamarin.Forms": "5.0.0.2291"
+        },
+        "compile": {
+          "lib/netstandard2.0/Xamarin.CommunityToolkit.dll": {}
+        },
+        "runtime": {
+          "lib/netstandard2.0/Xamarin.CommunityToolkit.dll": {}
         }
       },
       "Xamarin.Essentials/1.7.0": {
@@ -5345,8 +5740,9 @@
         "framework": ".NETStandard,Version=v2.0",
         "dependencies": {
           "System.Data.SqlClient": "4.8.3",
-          "Xamarin.Essentials": "1.7.0",
-          "Xamarin.Forms": "5.0.0.2196",
+          "Xamarin.CommunityToolkit": "2.0.2",
+          "Xamarin.Essentials": "1.7.3",
+          "Xamarin.Forms": "5.0.0.2401",
           "sqlite-net-pcl": "1.8.116"
         },
         "compile": {
@@ -10050,6 +10446,122 @@
         "version.txt"
       ]
     },
+    "System.Reflection.Emit.ILGeneration/4.7.0": {
+      "sha512": "AucBYo3DSI0IDxdUjKksBcQJXPHyoPyrCXYURW1WDsLI4M65Ar/goSHjdnHOAY9MiYDNKqDlIgaYm+zL2hA1KA==",
+      "type": "package",
+      "path": "system.reflection.emit.ilgeneration/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.Reflection.Emit.ILGeneration.dll",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.Reflection.Emit.ILGeneration.dll",
+        "lib/netstandard1.0/System.Reflection.Emit.ILGeneration.xml",
+        "lib/netstandard1.3/System.Reflection.Emit.ILGeneration.dll",
+        "lib/netstandard2.0/System.Reflection.Emit.ILGeneration.dll",
+        "lib/netstandard2.0/System.Reflection.Emit.ILGeneration.xml",
+        "lib/netstandard2.1/_._",
+        "lib/portable-net45+wp8/_._",
+        "lib/wp80/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.0/System.Reflection.Emit.ILGeneration.dll",
+        "ref/netstandard1.0/System.Reflection.Emit.ILGeneration.xml",
+        "ref/netstandard1.0/de/System.Reflection.Emit.ILGeneration.xml",
+        "ref/netstandard1.0/es/System.Reflection.Emit.ILGeneration.xml",
+        "ref/netstandard1.0/fr/System.Reflection.Emit.ILGeneration.xml",
+        "ref/netstandard1.0/it/System.Reflection.Emit.ILGeneration.xml",
+        "ref/netstandard1.0/ja/System.Reflection.Emit.ILGeneration.xml",
+        "ref/netstandard1.0/ko/System.Reflection.Emit.ILGeneration.xml",
+        "ref/netstandard1.0/ru/System.Reflection.Emit.ILGeneration.xml",
+        "ref/netstandard1.0/zh-hans/System.Reflection.Emit.ILGeneration.xml",
+        "ref/netstandard1.0/zh-hant/System.Reflection.Emit.ILGeneration.xml",
+        "ref/netstandard2.0/System.Reflection.Emit.ILGeneration.dll",
+        "ref/netstandard2.0/System.Reflection.Emit.ILGeneration.xml",
+        "ref/netstandard2.1/_._",
+        "ref/portable-net45+wp8/_._",
+        "ref/wp80/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/aot/lib/netcore50/System.Reflection.Emit.ILGeneration.dll",
+        "runtimes/aot/lib/netcore50/System.Reflection.Emit.ILGeneration.xml",
+        "system.reflection.emit.ilgeneration.4.7.0.nupkg.sha512",
+        "system.reflection.emit.ilgeneration.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
+    "System.Reflection.Emit.Lightweight/4.7.0": {
+      "sha512": "a4OLB4IITxAXJeV74MDx49Oq2+PsF6Sml54XAFv+2RyWwtDBcabzoxiiJRhdhx+gaohLh4hEGCLQyBozXoQPqA==",
+      "type": "package",
+      "path": "system.reflection.emit.lightweight/4.7.0",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net45/_._",
+        "lib/netcore50/System.Reflection.Emit.Lightweight.dll",
+        "lib/netcoreapp2.0/_._",
+        "lib/netstandard1.0/System.Reflection.Emit.Lightweight.dll",
+        "lib/netstandard1.0/System.Reflection.Emit.Lightweight.xml",
+        "lib/netstandard1.3/System.Reflection.Emit.Lightweight.dll",
+        "lib/netstandard2.0/System.Reflection.Emit.Lightweight.dll",
+        "lib/netstandard2.0/System.Reflection.Emit.Lightweight.xml",
+        "lib/netstandard2.1/_._",
+        "lib/portable-net45+wp8/_._",
+        "lib/wp80/_._",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/net45/_._",
+        "ref/netcoreapp2.0/_._",
+        "ref/netstandard1.0/System.Reflection.Emit.Lightweight.dll",
+        "ref/netstandard1.0/System.Reflection.Emit.Lightweight.xml",
+        "ref/netstandard1.0/de/System.Reflection.Emit.Lightweight.xml",
+        "ref/netstandard1.0/es/System.Reflection.Emit.Lightweight.xml",
+        "ref/netstandard1.0/fr/System.Reflection.Emit.Lightweight.xml",
+        "ref/netstandard1.0/it/System.Reflection.Emit.Lightweight.xml",
+        "ref/netstandard1.0/ja/System.Reflection.Emit.Lightweight.xml",
+        "ref/netstandard1.0/ko/System.Reflection.Emit.Lightweight.xml",
+        "ref/netstandard1.0/ru/System.Reflection.Emit.Lightweight.xml",
+        "ref/netstandard1.0/zh-hans/System.Reflection.Emit.Lightweight.xml",
+        "ref/netstandard1.0/zh-hant/System.Reflection.Emit.Lightweight.xml",
+        "ref/netstandard2.0/System.Reflection.Emit.Lightweight.dll",
+        "ref/netstandard2.0/System.Reflection.Emit.Lightweight.xml",
+        "ref/netstandard2.1/_._",
+        "ref/portable-net45+wp8/_._",
+        "ref/wp80/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "runtimes/aot/lib/netcore50/System.Reflection.Emit.Lightweight.dll",
+        "runtimes/aot/lib/netcore50/System.Reflection.Emit.Lightweight.xml",
+        "system.reflection.emit.lightweight.4.7.0.nupkg.sha512",
+        "system.reflection.emit.lightweight.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "System.Runtime.CompilerServices.Unsafe/4.7.0": {
       "sha512": "IpU1lcHz8/09yDr9N+Juc7SCgNUz+RohkCQI+KsWKR67XxpFr8Z6c8t1iENCXZuRuNCc4HBwme/MDHNVCwyAKg==",
       "type": "package",
@@ -10115,6 +10627,43 @@
         "version.txt"
       ]
     },
+    "System.Threading.Tasks.Extensions/4.5.4": {
+      "sha512": "zteT+G8xuGu6mS+mzDzYXbzS7rd3K6Fjb9RiZlYlJPam2/hU7JCBZBVEcywNuR+oZ1ncTvc/cq0faRr3P01OVg==",
+      "type": "package",
+      "path": "system.threading.tasks.extensions/4.5.4",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE.TXT",
+        "THIRD-PARTY-NOTICES.TXT",
+        "lib/MonoAndroid10/_._",
+        "lib/MonoTouch10/_._",
+        "lib/net461/System.Threading.Tasks.Extensions.dll",
+        "lib/net461/System.Threading.Tasks.Extensions.xml",
+        "lib/netcoreapp2.1/_._",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard1.0/System.Threading.Tasks.Extensions.xml",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.dll",
+        "lib/netstandard2.0/System.Threading.Tasks.Extensions.xml",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.dll",
+        "lib/portable-net45+win8+wp8+wpa81/System.Threading.Tasks.Extensions.xml",
+        "lib/xamarinios10/_._",
+        "lib/xamarinmac20/_._",
+        "lib/xamarintvos10/_._",
+        "lib/xamarinwatchos10/_._",
+        "ref/MonoAndroid10/_._",
+        "ref/MonoTouch10/_._",
+        "ref/netcoreapp2.1/_._",
+        "ref/xamarinios10/_._",
+        "ref/xamarinmac20/_._",
+        "ref/xamarintvos10/_._",
+        "ref/xamarinwatchos10/_._",
+        "system.threading.tasks.extensions.4.5.4.nupkg.sha512",
+        "system.threading.tasks.extensions.nuspec",
+        "useSharedDesignerContext.txt",
+        "version.txt"
+      ]
+    },
     "Win2D.uwp/1.20.0": {
       "sha512": "sFyNT2EiV6vmEFMrkiJdSolaKNyOyk+kfjgvXN8XqUhdEPqBd2zPrFdl7SojNHQGm2Br6JLIBOdrj9fB1Qy4GA==",
       "type": "package",
@@ -10133,6 +10682,47 @@
         "runtimes/win10-x86/native/Microsoft.Graphics.Canvas.dll",
         "win2d.uwp.1.20.0.nupkg.sha512",
         "win2d.uwp.nuspec"
+      ]
+    },
+    "Xamarin.CommunityToolkit/2.0.2": {
+      "sha512": "6GgGfnf14oIpOwtXYveAEj590jQwqQ4AcTndizc75GuhX0CvgozyE/0Jb9NWmE0bbLZoxfcc3BeGlxljRrUvMw==",
+      "type": "package",
+      "path": "xamarin.communitytoolkit/2.0.2",
+      "files": [
+        ".nupkg.metadata",
+        ".signature.p7s",
+        "LICENSE",
+        "analyzers/dotnet/xct/cs/Xamarin.CommunityToolkit.SourceGenerator.dll",
+        "icon.png",
+        "lib/monoandroid10.0/Xamarin.CommunityToolkit.dll",
+        "lib/monoandroid10.0/Xamarin.CommunityToolkit.xml",
+        "lib/net471/Xamarin.CommunityToolkit.dll",
+        "lib/net471/Xamarin.CommunityToolkit.xml",
+        "lib/net472/Xamarin.CommunityToolkit.dll",
+        "lib/net472/Xamarin.CommunityToolkit.xml",
+        "lib/netcoreapp3.1/Xamarin.CommunityToolkit.dll",
+        "lib/netcoreapp3.1/Xamarin.CommunityToolkit.xml",
+        "lib/netstandard1.0/Xamarin.CommunityToolkit.dll",
+        "lib/netstandard1.0/Xamarin.CommunityToolkit.xml",
+        "lib/netstandard2.0/Xamarin.CommunityToolkit.dll",
+        "lib/netstandard2.0/Xamarin.CommunityToolkit.xml",
+        "lib/netstandard2.1/Xamarin.CommunityToolkit.dll",
+        "lib/netstandard2.1/Xamarin.CommunityToolkit.xml",
+        "lib/tizen40/Xamarin.CommunityToolkit.dll",
+        "lib/tizen40/Xamarin.CommunityToolkit.xml",
+        "lib/uap10.0.18362/Xamarin.CommunityToolkit.dll",
+        "lib/uap10.0.18362/Xamarin.CommunityToolkit.pri",
+        "lib/uap10.0.18362/Xamarin.CommunityToolkit.xml",
+        "lib/xamarinios10/Xamarin.CommunityToolkit.dll",
+        "lib/xamarinios10/Xamarin.CommunityToolkit.xml",
+        "lib/xamarinmac20/Xamarin.CommunityToolkit.dll",
+        "lib/xamarinmac20/Xamarin.CommunityToolkit.xml",
+        "lib/xamarintvos10/Xamarin.CommunityToolkit.dll",
+        "lib/xamarintvos10/Xamarin.CommunityToolkit.xml",
+        "lib/xamarinwatchos10/Xamarin.CommunityToolkit.dll",
+        "lib/xamarinwatchos10/Xamarin.CommunityToolkit.xml",
+        "xamarin.communitytoolkit.2.0.2.nupkg.sha512",
+        "xamarin.communitytoolkit.nuspec"
       ]
     },
     "Xamarin.Essentials/1.7.0": {
@@ -10494,5 +11084,41 @@
         "#import": []
       }
     }
-  }
+  },
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Обнаружено понижение версии пакета Xamarin.Essentials с 1.7.3 на 1.7.0. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n Olympic-stats-xamarin.UWP -> Olympic-stats-xamarin -> Xamarin.Essentials (>= 1.7.3) \r\n Olympic-stats-xamarin.UWP -> Xamarin.Essentials (>= 1.7.0)",
+      "libraryId": "Xamarin.Essentials",
+      "targetGraphs": [
+        "UAP,Version=v10.0.16299",
+        "UAP,Version=v10.0.16299/win10-arm",
+        "UAP,Version=v10.0.16299/win10-arm-aot",
+        "UAP,Version=v10.0.16299/win10-arm64-aot",
+        "UAP,Version=v10.0.16299/win10-x64",
+        "UAP,Version=v10.0.16299/win10-x64-aot",
+        "UAP,Version=v10.0.16299/win10-x86",
+        "UAP,Version=v10.0.16299/win10-x86-aot"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Обнаружено понижение версии пакета Xamarin.Forms с 5.0.0.2401 на 5.0.0.2196. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n Olympic-stats-xamarin.UWP -> Olympic-stats-xamarin -> Xamarin.Forms (>= 5.0.0.2401) \r\n Olympic-stats-xamarin.UWP -> Xamarin.Forms (>= 5.0.0.2196)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "UAP,Version=v10.0.16299",
+        "UAP,Version=v10.0.16299/win10-arm",
+        "UAP,Version=v10.0.16299/win10-arm-aot",
+        "UAP,Version=v10.0.16299/win10-arm64-aot",
+        "UAP,Version=v10.0.16299/win10-x64",
+        "UAP,Version=v10.0.16299/win10-x64-aot",
+        "UAP,Version=v10.0.16299/win10-x86",
+        "UAP,Version=v10.0.16299/win10-x86-aot"
+      ]
+    }
+  ]
 }

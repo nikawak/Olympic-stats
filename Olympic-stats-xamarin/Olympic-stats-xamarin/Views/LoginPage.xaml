@@ -6,6 +6,7 @@
              xmlns:viewmodel="clr-namespace:Olympic_stats_xamarin.ViewModels"
              mc:Ignorable="d"
              x:Class="Olympic_stats_xamarin.Views.LoginPage"
+             xmlns:xct="http://xamarin.com/schemas/2020/toolkit"
              Shell.NavBarIsVisible="False">
 
     <ContentPage.BindingContext>
@@ -16,9 +17,18 @@
         <StackLayout Style="{StaticResource StackLayoutDefault}" VerticalOptions="Fill" Padding="10,0,10,0">
             <Button VerticalOptions="CenterAndExpand" HorizontalOptions="FillAndExpand"
                     Text="Login" FontSize="Medium" Command="{Binding LoginCommand}"/>
-            <StackLayout Style="{StaticResource StackLayoutNone}" VerticalOptions="CenterAndExpand">
+            <StackLayout  VerticalOptions="CenterAndExpand">
                 <Label Text="Нет аккаунта?" FontSize="Medium"/>
-                <Button Text="Зарегистрироваться" FontSize="Medium" Command="{Binding RegistrationCommand}"/>
+                <Label Text="Зарегистрироваться" FontSize="Medium">
+                    <!--<Label.Behaviors>
+                        <xct:EventToCommandBehavior
+                            EventName="Focused"
+                            Command="{Binding RegistrationCommand}"/>
+                    </Label.Behaviors>-->
+                    <Label.GestureRecognizers>
+                        <TapGestureRecognizer Command="{Binding RegistrationCommand}"/>
+                    </Label.GestureRecognizers>
+                </Label>
             </StackLayout>
         </StackLayout>
     </ContentPage.Content>

@@ -15,6 +15,7 @@ namespace Olympic_stats_xamarin.Models
         public string SurName { get; set; }
         public string FunctionalClass { get; set; }
         public string Sex { get; set; }
+        //public List<SportResult> SportResults { get; set; } = new List<SportResult>();
 
         public Sportsman() { }
         public override string ToString()

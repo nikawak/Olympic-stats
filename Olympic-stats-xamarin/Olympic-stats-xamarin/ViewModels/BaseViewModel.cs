@@ -1,16 +1,13 @@
-﻿using Olympic_stats_xamarin.Models;
-using Olympic_stats_xamarin.Services;
-using System;
+﻿using System;
 using System.Collections.Generic;
 using System.ComponentModel;
 using System.Runtime.CompilerServices;
-using Xamarin.Forms;
 
 namespace Olympic_stats_xamarin.ViewModels
 {
     public class BaseViewModel : INotifyPropertyChanged
     {
-        public IDataStore<Sportsman> DataStore => DependencyService.Get<IDataStore<Sportsman>>();
+        //public IDataStore<Sportsman> DataStore => DependencyService.Get<IDataStore<Sportsman>>();
 
         bool isBusy = false;
         public bool IsBusy

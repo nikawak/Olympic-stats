@@ -1,7 +1,4 @@
 ﻿using Olympic_stats_xamarin.Views;
-using System;
-using System.Collections.Generic;
-using System.Text;
 using Xamarin.Forms;
 
 namespace Olympic_stats_xamarin.ViewModels

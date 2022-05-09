@@ -1,5 +1,4 @@
-﻿using Olympic_stats_xamarin.Services;
-using Olympic_stats_xamarin.Models;
+﻿using Olympic_stats_xamarin.Models;
 using Olympic_stats_xamarin.Views;
 using System;
 using Xamarin.Essentials;
@@ -15,7 +14,7 @@ namespace Olympic_stats_xamarin
         {
             InitializeComponent();
 
-            DependencyService.Register<MockDataStore>();
+            //DependencyService.Register<MockDataStore>();
             MainPage = new AppShell();
         }
 

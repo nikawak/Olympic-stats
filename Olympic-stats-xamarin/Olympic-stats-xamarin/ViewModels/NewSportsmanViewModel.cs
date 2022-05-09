@@ -1,8 +1,5 @@
-﻿using Olympic_stats_xamarin.Models;
-using System;
-using System.Collections.Generic;
-using System.Text;
-using System.Windows.Input;
+﻿using Olympic_stats_xamarin.Helpers;
+using Olympic_stats_xamarin.Models;
 using Xamarin.Forms;
 
 namespace Olympic_stats_xamarin.ViewModels
@@ -59,7 +56,6 @@ namespace Olympic_stats_xamarin.ViewModels
 
         private async void OnCancel()
         {
-            // This will pop the current page off the navigation stack
             await Shell.Current.GoToAsync("..");
         }
 
@@ -73,9 +69,7 @@ namespace Olympic_stats_xamarin.ViewModels
                 Sex = sex
             };
 
-            await DataStore.AddItemAsync(newItem);
-
-            // This will pop the current page off the navigation stack
+            await LocalDB.Insert(newItem);
 
             await Shell.Current.GoToAsync("..");
         }

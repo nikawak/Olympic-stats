@@ -19,7 +19,7 @@
     <DeployOptionalPackages>false</DeployOptionalPackages>
     <WindowsSdkPath>D:\Windows Kits\10\</WindowsSdkPath>
     <LayoutDir>D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\bin\x64\Debug\AppX</LayoutDir>
-    <RegisteredManifestChecksum>1DFEB1DA9AE4BE245C6BB360778DBD32C0F68BA790D33FEDCCCD5BDE0CCC94D5</RegisteredManifestChecksum>
+    <RegisteredManifestChecksum>34DD5F53FCFC3AC60FA4E0B67DF6D4D51293C7B0CF4CB0F9D7949AE90C084676</RegisteredManifestChecksum>
     <RegisteredPackageMoniker>46E9E47A-3AF2-4F67-95B2-BB5B9364A66F_1.0.0.0_x64__w69mnadvz7bmc</RegisteredPackageMoniker>
     <RegisteredUserModeAppID>46E9E47A-3AF2-4F67-95B2-BB5B9364A66F_w69mnadvz7bmc!App</RegisteredUserModeAppID>
     <RegisteredPackageID>46E9E47A-3AF2-4F67-95B2-BB5B9364A66F</RegisteredPackageID>
@@ -30,13 +30,13 @@
     <AppXManifest Include="D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\bin\x64\Debug\Core\AppxManifest.xml">
       <PackagePath>AppxManifest.xml</PackagePath>
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
-      <Modified>2022-04-26T02:38:46.552</Modified>
+      <Modified>2022-05-09T21:38:19.229</Modified>
     </AppXManifest>
   </ItemGroup>
   <ItemGroup>
     <AppxPackagedFile Include="D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\bin\x64\Debug\Olympic-stats-xamarin.UWP.exe">
       <PackagePath>entrypoint\Olympic-stats-xamarin.UWP.exe</PackagePath>
-      <Modified>2022-04-26T02:38:40.453</Modified>
+      <Modified>2022-05-09T21:38:16.592</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Никита\.nuget\packages\runtime.win10-x64.microsoft.netcore.universalwindowsplatform\6.2.12\runtimes\win10-x64\lib\uap10.0.15138\System.Runtime.dll">
       <PackagePath>System.Runtime.dll</PackagePath>
@@ -82,6 +82,10 @@
       <PackagePath>Microsoft.Graphics.Canvas.dll</PackagePath>
       <Modified>2016-11-30T02:58:38.000</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="C:\Users\Никита\.nuget\packages\xamarin.communitytoolkit\2.0.2\lib\netstandard2.0\Xamarin.CommunityToolkit.dll">
+      <PackagePath>Xamarin.CommunityToolkit.dll</PackagePath>
+      <Modified>2022-05-03T07:17:18.000</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Никита\.nuget\packages\xamarin.essentials\1.7.0\lib\uap10.0.16299\Xamarin.Essentials.dll">
       <PackagePath>Xamarin.Essentials.dll</PackagePath>
       <Modified>2021-07-13T15:07:20.000</Modified>
@@ -104,7 +108,7 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin\bin\Debug\netstandard2.0\Olympic-stats-xamarin.dll">
       <PackagePath>Olympic-stats-xamarin.dll</PackagePath>
-      <Modified>2022-04-26T02:41:10.985</Modified>
+      <Modified>2022-05-09T21:46:41.000</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Users\Никита\.nuget\packages\win2d.uwp\1.20.0\lib\uap10.0\Microsoft.Graphics.Canvas.winmd">
       <PackagePath>Microsoft.Graphics.Canvas.winmd</PackagePath>
@@ -121,6 +125,10 @@
     <AppxPackagedFile Include="D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\cursed_cat.png">
       <PackagePath>cursed_cat.png</PackagePath>
       <Modified>2022-04-05T05:34:54.286</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\Sportsmans.png">
+      <PackagePath>Sportsmans.png</PackagePath>
+      <Modified>2022-05-06T18:57:47.138</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\img.png">
       <PackagePath>img.png</PackagePath>
@@ -261,6 +269,14 @@
       <ReRegisterAppIfChanged>true</ReRegisterAppIfChanged>
       <Modified>2022-03-26T21:31:30.715</Modified>
     </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\Settings.png">
+      <PackagePath>Settings.png</PackagePath>
+      <Modified>2022-05-06T19:49:37.769</Modified>
+    </AppxPackagedFile>
+    <AppxPackagedFile Include="D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\Timer.png">
+      <PackagePath>Timer.png</PackagePath>
+      <Modified>2022-05-06T19:47:37.054</Modified>
+    </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\xamarin_logo.png">
       <PackagePath>xamarin_logo.png</PackagePath>
       <Modified>2022-03-26T21:31:30.936</Modified>
@@ -283,11 +299,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\bin\x64\Debug\App.xbf">
       <PackagePath>App.xbf</PackagePath>
-      <Modified>2022-04-26T02:38:40.279</Modified>
+      <Modified>2022-05-09T21:38:16.491</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\bin\x64\Debug\MainPage.xbf">
       <PackagePath>MainPage.xbf</PackagePath>
-      <Modified>2022-04-26T02:38:40.279</Modified>
+      <Modified>2022-05-09T21:38:16.500</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="C:\Program Files %28x86%29\Microsoft SDKs\Windows Kits\10\ExtensionSDKs\Microsoft.UniversalCRT.Debug\10.0.19041.0\\redist\Debug\X64\ucrtbased.dll">
       <PackagePath>ucrtbased.dll</PackagePath>
@@ -303,11 +319,11 @@
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\bin\x64\Debug\resources.pri">
       <PackagePath>resources.pri</PackagePath>
-      <Modified>2022-04-25T10:36:20.140</Modified>
+      <Modified>2022-05-07T13:59:37.294</Modified>
     </AppxPackagedFile>
     <AppxPackagedFile Include="D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\bin\x64\Debug\Core\Olympic-stats-xamarin.UWP.exe">
       <PackagePath>Olympic-stats-xamarin.UWP.exe</PackagePath>
-      <Modified>2022-04-26T02:38:46.514</Modified>
+      <Modified>2022-05-09T21:38:19.150</Modified>
     </AppxPackagedFile>
   </ItemGroup>
   <ItemGroup>

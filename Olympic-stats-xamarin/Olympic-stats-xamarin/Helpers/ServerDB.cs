@@ -27,7 +27,7 @@ namespace Olympic_stats_xamarin.Helpers
         private void SetDBConnection()
         {
             string server = "192.168.100.9";
-            string @default = "192.168.56.1";
+            //string @default = "192.168.56.1";
             string sqlConnectionString = $"Data Source={server};Initial Catalog=Olympic-stats;User ID=nikawak-olympic;Password=1cTdJGV6vE25GHkZ";
             SqlConnection connection = new SqlConnection(sqlConnectionString);
             try

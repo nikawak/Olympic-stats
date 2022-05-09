@@ -1,6 +1,6 @@
 {
   "version": 2,
-  "dgSpecHash": "p4D8dKe2sNxorVCYbQ4+8toP0daYx9i3UCgfCowSV1cGw13YDF0eoi8lGlXt8ABN4yE8OXUkpyhZ3cGLohVtVw==",
+  "dgSpecHash": "8v2LO1cTD3eMwYK8XdxciE8Xnbu4I/Okpgvsrkj1M7erwFaP2dW3gZtvoE+OBjjNxQDqo6yseEIob7ziuU2Sdw==",
   "success": true,
   "projectFilePath": "D:\\Programming\\Olympic-stats\\Olympic-stats-xamarin\\Olympic-stats-xamarin.iOS\\Olympic-stats-xamarin.iOS.csproj",
   "expectedPackageFiles": [
@@ -13,8 +13,36 @@
     "C:\\Users\\Никита\\.nuget\\packages\\system.memory\\4.5.3\\system.memory.4.5.3.nupkg.sha512",
     "C:\\Users\\Никита\\.nuget\\packages\\system.numerics.vectors\\4.5.0\\system.numerics.vectors.4.5.0.nupkg.sha512",
     "C:\\Users\\Никита\\.nuget\\packages\\system.runtime.compilerservices.unsafe\\4.5.2\\system.runtime.compilerservices.unsafe.4.5.2.nupkg.sha512",
+    "C:\\Users\\Никита\\.nuget\\packages\\xamarin.communitytoolkit\\2.0.2\\xamarin.communitytoolkit.2.0.2.nupkg.sha512",
     "C:\\Users\\Никита\\.nuget\\packages\\xamarin.essentials\\1.7.0\\xamarin.essentials.1.7.0.nupkg.sha512",
     "C:\\Users\\Никита\\.nuget\\packages\\xamarin.forms\\5.0.0.2196\\xamarin.forms.5.0.0.2196.nupkg.sha512"
   ],
-  "logs": []
+  "logs": [
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Обнаружено понижение версии пакета Xamarin.Essentials с 1.7.3 на 1.7.0. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n Olympic-stats-xamarin.iOS -> Olympic-stats-xamarin -> Xamarin.Essentials (>= 1.7.3) \r\n Olympic-stats-xamarin.iOS -> Xamarin.Essentials (>= 1.7.0)",
+      "libraryId": "Xamarin.Essentials",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    },
+    {
+      "code": "NU1605",
+      "level": "Warning",
+      "warningLevel": 1,
+      "message": "Обнаружено понижение версии пакета Xamarin.Forms с 5.0.0.2401 на 5.0.0.2196. Чтобы выбрать другую версию, создайте ссылку на пакет напрямую из проекта. \r\n Olympic-stats-xamarin.iOS -> Olympic-stats-xamarin -> Xamarin.Forms (>= 5.0.0.2401) \r\n Olympic-stats-xamarin.iOS -> Xamarin.Forms (>= 5.0.0.2196)",
+      "libraryId": "Xamarin.Forms",
+      "targetGraphs": [
+        "Xamarin.iOS,Version=v1.0",
+        "Xamarin.iOS,Version=v1.0/win",
+        "Xamarin.iOS,Version=v1.0/win-x64",
+        "Xamarin.iOS,Version=v1.0/win-x86"
+      ]
+    }
+  ]
 }

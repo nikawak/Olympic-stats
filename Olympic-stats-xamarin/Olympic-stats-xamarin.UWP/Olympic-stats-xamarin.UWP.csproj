@@ -10,7 +10,7 @@
     <AppDesignerFolder>Properties</AppDesignerFolder>
     <RootNamespace>Olympic_stats_xamarin.UWP</RootNamespace>
     <AssemblyName>Olympic-stats-xamarin.UWP</AssemblyName>
-    <DefaultLanguage>en-US</DefaultLanguage>
+    <DefaultLanguage>ru-RU</DefaultLanguage>
     <TargetPlatformIdentifier>UAP</TargetPlatformIdentifier>
     <TargetPlatformVersion>10.0.19041.0</TargetPlatformVersion>
     <TargetPlatformMinVersion>10.0.16299.0</TargetPlatformMinVersion>
@@ -105,6 +105,7 @@
   </ItemGroup>
   <ItemGroup>
     <Content Include="cursed_cat.png" />
+    <Content Include="Sportsmans.png" />
     <Content Include="img.png" />
     <Content Include="Properties\Default.rd.xml" />
     <Content Include="Assets\LargeTile.scale-100.png" />
@@ -134,6 +135,8 @@
     <Content Include="Assets\Wide310x150Logo.scale-100.png" />
     <Content Include="Assets\Wide310x150Logo.scale-200.png" />
     <Content Include="Assets\Wide310x150Logo.scale-400.png" />
+    <Content Include="Settings.png" />
+    <Content Include="Timer.png" />
     <Content Include="xamarin_logo.png" />
     <Content Include="icon_about.png" />
     <Content Include="icon_feed.png" />

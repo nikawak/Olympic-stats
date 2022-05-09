@@ -1,9 +1,5 @@
-﻿using Olympic_stats_xamarin.Helpers;
-using Olympic_stats_xamarin.Models;
+﻿using Olympic_stats_xamarin.Models;
 using Olympic_stats_xamarin.Views;
-using System.Collections.ObjectModel;
-using System.ComponentModel;
-using System.Threading.Tasks;
 using Xamarin.Forms;
 
 namespace Olympic_stats_xamarin.ViewModels

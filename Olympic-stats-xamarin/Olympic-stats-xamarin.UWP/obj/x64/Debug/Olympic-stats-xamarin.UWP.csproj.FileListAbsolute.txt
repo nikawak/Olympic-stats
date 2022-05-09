@@ -73,3 +73,6 @@ D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\bin
 D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\bin\x64\Debug\SQLitePCLRaw.core.dll
 D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\bin\x64\Debug\e_sqlite3.dll
 D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\bin\x64\Debug\SQLitePCLRaw.provider.e_sqlite3.dll
+D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\obj\x64\Debug\resources.en-us.resfiles
+D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\obj\x64\Debug\resources.en-us.resfiles.intermediate
+D:\Programming\Olympic-stats\Olympic-stats-xamarin\Olympic-stats-xamarin.UWP\bin\x64\Debug\Xamarin.CommunityToolkit.dll
